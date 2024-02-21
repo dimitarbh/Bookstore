@@ -59,10 +59,9 @@ reuse general colors(5-6 additional colors), styles, components
             - price
 2. Profile page
     - Header (reuseable)
-        - logo
-        - cart button
-        - site name
+        - profile page title
         - design
+    - back button
     - footer (reuseable)
         - contact us button
             - contact us modal
@@ -78,8 +77,12 @@ reuse general colors(5-6 additional colors), styles, components
         - card details
     - profile info container
         - profile picture
+            - avatar picture
         - profile info
+            - description about yourself
         - edit button
+            - edits profile info description
+                - you can edit it in the description textfield
 2.1. Login screen
     - Header (reuseable)
         - logo
@@ -88,18 +91,35 @@ reuse general colors(5-6 additional colors), styles, components
         - username textfield (reuseable)
         - password textfield (reuseable)
         - e-mail textfield (reuseable)
+        - change password link
+            - change password modal
+                - username label (reuseable)
+                - username textfield (reuseable)     
+                - change password label
+                - change password textfield
+                - confirm password label
+                - confirm password textfield
+                - apply button
         - forgot password link
             -forgot password modal
                 - forgot password container
+                    - username label (reuseable)
                     - username textfield (reuseable)
-                    - last password you remember
-                    - E-Mail (reuseable)
+                    - last password you remember label
+                    - last password you remember textfield
+                        - the last password you remember in your mind
+                            - look for the last password of that name and e-mail in the data base 
+                        - improve security of profile
+                    - E-Mail (reuseable) label
+                    - E-Mail (reuseable) textfield
                     - send button 
         - sign up button (reuseable)
         - log in button 
         - log in with
             - facebook (reuseable)
+                -   https://www.codexworld.com/login-with-facebook-using-javascript-sdk/
             - google (reuseable)
+                - https://firebase.google.com/docs/auth/web/google-signin#:~:text=Add%20Firebase%20to%20your%20JavaScript,in%20method%20and%20click%20Save.
 2.2 Sign up  screen
     - Header  (reuseable)
         - logo
@@ -122,6 +142,7 @@ reuse general colors(5-6 additional colors), styles, components
             - x card
             - y card
             - z card
+                - enter card number
         - add card button
             - add card modal
                 - add card container 
@@ -151,8 +172,9 @@ reuse general colors(5-6 additional colors), styles, components
             - no button  (reuseable)
             - yes button (reuseable)
 4. News page
-    - back button 
-    - news title
+    - header
+        - back button 
+        - news title
     - sort drop down menu (reuseable)
         - newest
         - oldest
@@ -262,11 +284,8 @@ reuse general colors(5-6 additional colors), styles, components
             - discount tag
 7. Favorites page
     - Header  (reuseable)
-        - logo
-        - cart button
-        - site name
         - design
-    - favorites title
+        - favorites title
     - favorites page container
         - first favorites container (reuseable)
             - image
@@ -300,17 +319,25 @@ reuse general colors(5-6 additional colors), styles, components
         - instagram
         - linkedin
 9. Card details page
-    - card details title
+    - header (reuseable)
+        - style
+        - back button
+        - card details title
     - card details container stretched
         - image of a debit card
-            - template from somewhere which will be connected to a what card im adding
-        - name label
-            - name textfield
-        - address label
-            - address textfield
+            - а template from somewhere which will be connected with algorithm about what card im adding
+        - first name label
+        - first name textfield
+        - last name label
+        - last name textfield
         - card number label
-             - card number textfield
-        - apply button 
+        - card number textfield
+        - expiration date label
+        - expiration date textfield
+        - edit button (reuseable)
+            - edits user card info names, card number, expiration date
+        - apply button (reuseable)
+            - apply any changes
 
 button reuse apply, add
 book container top sellers, books, promotions
