@@ -79,7 +79,7 @@ reuse general colors(5-6 additional colors), styles, components
     - profile info container
         - profile picture
         - profile info
-        - apply button
+        - edit button
 2.1. Login screen
     - Header (reuseable)
         - logo
@@ -96,7 +96,7 @@ reuse general colors(5-6 additional colors), styles, components
                     - E-Mail (reuseable)
                     - send button 
         - sign up button (reuseable)
-        - sign in button 
+        - log in button 
         - log in with
             - facebook (reuseable)
             - google (reuseable)
@@ -117,8 +117,23 @@ reuse general colors(5-6 additional colors), styles, components
     - right payment details container 
          - choose card label
          - choose card drop down menu
-            - card 1
-            - card 2 ...
+            - visa
+            - mastercard
+            - x card
+            - y card
+            - z card
+        - add card button
+            - add card modal
+                - add card container 
+                    - first name label
+                    - first name input
+                    - last name label
+                    - first name input
+                    - card number label
+                    - card number input
+                    - expiration date label
+                    - expiration date input
+                    - apply button
          - shipping address
          - shipping address drop down menu
          - total cost text
@@ -136,11 +151,7 @@ reuse general colors(5-6 additional colors), styles, components
             - no button  (reuseable)
             - yes button (reuseable)
 4. News page
-    - Header  (reuseable)
-        - logo
-        - cart button
-        - site name
-        - design
+    - back button 
     - news title
     - sort drop down menu (reuseable)
         - newest
@@ -156,11 +167,7 @@ reuse general colors(5-6 additional colors), styles, components
             - title of the news
             - description
 4. Individual News page
-    - Header  (reuseable)
-        - logo
-        - cart button
-        - site name
-        - design
+    - back button
     - news container (reuseable)
         - stretched first news container  (reuseable)
             - image 
@@ -179,14 +186,14 @@ reuse general colors(5-6 additional colors), styles, components
     - new products container (reuseable)
         - stretched first new product container  (reuseable)
             - image 
-            - title of the news
+            - title of the new product
             - description
             - add button
             - price tag 
             - favorite star
         - stretched first new product container  (reuseable)
             - image 
-            - title of the news
+            - title of the new product
             - description
             - add button
             - price tag
@@ -228,6 +235,7 @@ reuse general colors(5-6 additional colors), styles, components
             - price tag
             - add button
             - favorite star
+            - discount tag
         - second New products container (reuseable)
             - image
             - title
@@ -235,6 +243,7 @@ reuse general colors(5-6 additional colors), styles, components
             - price tag
             - add button
             - favorite star
+            - discount tag
         - third New products container (reuseable)
             - image
             - title
@@ -242,6 +251,7 @@ reuse general colors(5-6 additional colors), styles, components
             - price tag
             - add button
             - favorite star
+            - discount tag
         - fourth New products container (reuseable)
             - image
             - title
@@ -249,12 +259,14 @@ reuse general colors(5-6 additional colors), styles, components
             - price tag
             - add button
             - favorite star
+            - discount tag
 7. Favorites page
     - Header  (reuseable)
         - logo
         - cart button
         - site name
         - design
+    - favorites title
     - favorites page container
         - first favorites container (reuseable)
             - image
@@ -288,21 +300,17 @@ reuse general colors(5-6 additional colors), styles, components
         - instagram
         - linkedin
 9. Card details page
-    - Header  (reuseable)
-        - logo
-        - cart button
-        - site name
-        - design
     - card details title
     - card details container stretched
         - image of a debit card
+            - template from somewhere which will be connected to a what card im adding
         - name label
             - name textfield
         - address label
             - address textfield
         - card number label
              - card number textfield
-        - apple button 
+        - apply button 
 
 button reuse apply, add
 book container top sellers, books, promotions
