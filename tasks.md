@@ -306,5 +306,13 @@ reuse general colors(5-6 additional colors), styles, components
 
 button reuse apply, add
 book container top sellers, books, promotions
-book container strech promotions, new products
+book container stretch promotions, new products
 favorites stars
+username textfield 
+password textfield
+Header
+yes button 
+no button 
+modal 
+share with text
+product container
