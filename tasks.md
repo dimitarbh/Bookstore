@@ -1,0 +1,310 @@
+General guide lines
+reuse general colors(5-6 additional colors), styles, components
+
+
+1. Homepage
+    - Header 
+        - logo
+        - cart button
+        - site name
+        - design
+    - footer
+        - contact us button
+            - contact us modal
+                - form 
+                    - email
+                    - address
+                    - phone number
+                    - message
+                    - button send
+        - text field(copyright)
+        - social media buttons *(reuseable)
+    - left navigational panel
+        - profile button / login button
+        - promotions button
+        - news button
+        - new product button
+    - right sidebar
+        - filter for the book container
+            - form
+                - name text fields
+                - author text fields
+                - genre drop down menu
+                - box fields comics
+                - box fields board games
+                - box fields accessories
+                - reset button (reuseable)
+                - apply button (reuseable)
+    - top seller container
+        - a container for the books that are sorted by the numbers of sold items
+            - book container
+                - image
+                - title
+                - description
+                - favourites star
+                - add button
+                - price tag
+    - books container
+        - a container for the books that are sorted by the newest added by default
+            - book container
+                - image
+                - title
+                - description
+                - favourites star
+                - add button
+                - price tag
+        - sort drop down menu 
+            - newest added 
+            - sold items
+            - price
+2. Profile page
+    - Header (reuseable)
+        - logo
+        - cart button
+        - site name
+        - design
+    - footer (reuseable)
+        - contact us button
+            - contact us modal
+                - form 
+                    - email
+                    - address
+                    - phone number
+                    - message
+                    - button send
+    - navigation container
+        - profile info
+        - favorites
+        - card details
+    - profile info container
+        - profile picture
+        - profile info
+        - apply button
+2.1. Login screen
+    - Header (reuseable)
+        - logo
+        - design
+    - Log in container
+        - username textfield (reuseable)
+        - password textfield (reuseable)
+        - e-mail textfield (reuseable)
+        - forgot password link
+            -forgot password modal
+                - forgot password container
+                    - username textfield (reuseable)
+                    - last password you remember
+                    - E-Mail (reuseable)
+                    - send button 
+        - sign up button (reuseable)
+        - sign in button 
+        - log in with
+            - facebook (reuseable)
+            - google (reuseable)
+2.2 Sign up  screen
+    - Header  (reuseable)
+        - logo
+        - design
+    - Sign up container
+        - username textfield (reuseable)
+        - password textfield (reuseable)
+        - confirm password textfield (reuseable)
+        - e-mail textfield (reuseable)
+        - sign up button (reuseable)
+3. Cart page
+    - left product container
+        - product title
+        - added products
+    - right payment details container 
+         - choose card label
+         - choose card drop down menu
+            - card 1
+            - card 2 ...
+         - shipping address
+         - shipping address drop down menu
+         - total cost text
+         - total cost value
+    - cancel button
+        - cancel modal
+            - cancel container (reuseable)
+                - are you sure you want to cancel the order text (reuseable)
+            - yes button (reuseable)
+            - no button (reuseable)
+    - buy button
+        - confirmation modal (reuseable)
+            - confirmation container (reuseable)
+                - are you sure you want to proceed with the order text (reuseable)
+            - no button  (reuseable)
+            - yes button (reuseable)
+4. News page
+    - Header  (reuseable)
+        - logo
+        - cart button
+        - site name
+        - design
+    - news title
+    - sort drop down menu (reuseable)
+        - newest
+        - oldest
+        - alphabetical
+    - news container (reuseable)
+        - stretched first news container  (reuseable)
+            - image 
+            - title of the news
+            - description
+        - stretched second news container  (reuseable)
+            - image 
+            - title of the news
+            - description
+4. Individual News page
+    - Header  (reuseable)
+        - logo
+        - cart button
+        - site name
+        - design
+    - news container (reuseable)
+        - stretched first news container  (reuseable)
+            - image 
+            - title of the news
+            - description
+    - share with text (reuseable)
+        - facebook
+        - instagram
+        - linkedin
+5. New products
+    - Header  (reuseable)
+        - logo
+        - cart button
+        - site name
+        - design
+    - new products container (reuseable)
+        - stretched first new product container  (reuseable)
+            - image 
+            - title of the news
+            - description
+            - add button
+            - price tag 
+            - favorite star
+        - stretched first new product container  (reuseable)
+            - image 
+            - title of the news
+            - description
+            - add button
+            - price tag
+            - favorite star
+5.1. Individual New products page
+    - Header  (reuseable)
+        - logo
+        - cart button
+        - site name
+        - design
+    - Individual New products container (reuseable)
+        - image
+        - title
+        - description 
+        - price tag
+        - add button
+        - favorite star
+    - share with text (reuseable)
+        - facebook
+        - instagram
+        - linkedin
+
+6. Promotions page
+    - Header  (reuseable)
+        - logo
+        - cart button
+        - site name
+        - design
+    - sort drop down menu (reuseable)
+        - alphabetical
+        - price
+        - date
+    - cart button (reuseable)
+    - promotions container
+        - first New products container (reuseable)
+            - image
+            - title
+            - description 
+            - price tag
+            - add button
+            - favorite star
+        - second New products container (reuseable)
+            - image
+            - title
+            - description 
+            - price tag
+            - add button
+            - favorite star
+        - third New products container (reuseable)
+            - image
+            - title
+            - description 
+            - price tag
+            - add button
+            - favorite star
+        - fourth New products container (reuseable)
+            - image
+            - title
+            - description 
+            - price tag
+            - add button
+            - favorite star
+7. Favorites page
+    - Header  (reuseable)
+        - logo
+        - cart button
+        - site name
+        - design
+    - favorites page container
+        - first favorites container (reuseable)
+            - image
+            - title
+            - description 
+            - price tag
+            - add button
+            - favorite star
+        - second favorites container (reuseable)
+            - image
+            - title
+            - description 
+            - price tag
+            - add button
+            - favorite star
+8. Individual favorites item
+    - Header  (reuseable)
+        - logo
+        - cart button
+        - site name
+        - design
+    - single favorites page container (reuseable)
+            - image
+            - title
+            - description 
+            - price tag
+            - add button
+            - favorite star
+    - share with text (reuseable)
+        - facebook
+        - instagram
+        - linkedin
+9. Card details page
+    - Header  (reuseable)
+        - logo
+        - cart button
+        - site name
+        - design
+    - card details title
+    - card details container stretched
+        - image of a debit card
+        - name label
+            - name textfield
+        - address label
+            - address textfield
+        - card number label
+             - card number textfield
+        - apple button 
+
+button reuse apply, add
+book container top sellers, books, promotions
+book container strech promotions, new products
+favorites stars
