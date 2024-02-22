@@ -73,6 +73,7 @@ reuse general colors(5-6 additional colors), styles, components
                     - button send
     - navigation container
         - profile info
+        <!-- /da go opisha kolko diva i kude i za kakvo validacii za parolata po maila posle kakva shte e parolata glavni cifri ... / -->
             - short description about yourself, the books you are interested in 
         - favorites
         - card details
@@ -104,21 +105,11 @@ reuse general colors(5-6 additional colors), styles, components
         - forgot password link
             -forgot password modal
                 - forgot password container
-                    - username label (reuseable)
-                    - username textfield (reuseable)
-                        - server checks if there is that user with this username
-                    - last password you remember label
-                    - last password you remember textfield 
-                        - servers checks if there was such a password recently
-                        - the last password you remember in your mind
-                            - look for the last password of that name and e-mail in the data base 
-                        - improve security of profile
-                        - if the username match the entered last password
                     - E-Mail (reuseable) label
                     - E-Mail (reuseable) textfield
-                        - if the username match the entered last password the server will send a new random password to the user's e-mail,
-                        then the user has to change the new random password in order to remember  it
                     - send button 
+                        - onClick
+                            - label sent password to your e-mail, you have 24 hour to change it  
         - sign up button (reuseable)
         - log in button 
 2.2 Sign up  screen
@@ -337,19 +328,27 @@ reuse general colors(5-6 additional colors), styles, components
             - edits user card info names, card number, expiration date
         - see all cards button
             - opens a modal list of all cards and gives you the option to choose one of them
-        - add new card
-            -  opens up a modal for adding a new card
-            - first name label
-            - first name textfield
-            - last name label
-            - last name textfield
-            - card number label
-            - card number textfield
-            - cvc label
-            - cvc textfield
-            - payment options
-                - tells you which payment options are supported
-            - add button
+            - add new card
+                -  opens up a modal for adding a new card
+                - first name label
+                - first name textfield
+                - last name label
+                - last name textfield
+                - card number label
+                - card number textfield
+                - cvc label
+                - cvc textfield
+                - payment options
+                    - tells you which payment options are supported
+                - add button
+            - delete button
+                - delete modal 
+                    - ask for approval  before deleting
+                      - yes/no buttons
+                          - yes -> deletes the card
+                              - goes back to previous screen
+                          - no -> closes the modal
+                            - close button
         - apply button (reuseable)
             - apply any changes
 
@@ -365,3 +364,4 @@ no button
 modal 
 share with text
 product container
+
