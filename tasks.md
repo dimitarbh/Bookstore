@@ -73,6 +73,7 @@ reuse general colors(5-6 additional colors), styles, components
                     - button send
     - navigation container
         - profile info
+            - short description about yourself, the books you are interested in 
         - favorites
         - card details
     - profile info container
@@ -91,35 +92,35 @@ reuse general colors(5-6 additional colors), styles, components
         - username textfield (reuseable)
         - password textfield (reuseable)
         - e-mail textfield (reuseable)
-        - change password link
-            - change password modal
+        - new password link
+            - new password modal
                 - username label (reuseable)
                 - username textfield (reuseable)     
-                - change password label
-                - change password textfield
-                - confirm password label
-                - confirm password textfield
+                - new password label
+                - new password textfield
+                - confirm new password label
+                - confirm new password textfield
                 - apply button
         - forgot password link
             -forgot password modal
                 - forgot password container
                     - username label (reuseable)
                     - username textfield (reuseable)
+                        - server checks if there is that user with this username
                     - last password you remember label
-                    - last password you remember textfield
+                    - last password you remember textfield 
+                        - servers checks if there was such a password recently
                         - the last password you remember in your mind
                             - look for the last password of that name and e-mail in the data base 
                         - improve security of profile
+                        - if the username match the entered last password
                     - E-Mail (reuseable) label
                     - E-Mail (reuseable) textfield
+                        - if the username match the entered last password the server will send a new random password to the user's e-mail,
+                        then the user has to change the new random password in order to remember  it
                     - send button 
         - sign up button (reuseable)
         - log in button 
-        - log in with
-            - facebook (reuseable)
-                -   https://www.codexworld.com/login-with-facebook-using-javascript-sdk/
-            - google (reuseable)
-                - https://firebase.google.com/docs/auth/web/google-signin#:~:text=Add%20Firebase%20to%20your%20JavaScript,in%20method%20and%20click%20Save.
 2.2 Sign up  screen
     - Header  (reuseable)
         - logo
@@ -137,12 +138,8 @@ reuse general colors(5-6 additional colors), styles, components
     - right payment details container 
          - choose card label
          - choose card drop down menu
-            - visa
-            - mastercard
-            - x card
-            - y card
-            - z card
-                - enter card number
+            - opens the modal from card details/see all cards
+            - or enter card number manually now
         - add card button
             - add card modal
                 - add card container 
@@ -154,6 +151,8 @@ reuse general colors(5-6 additional colors), styles, components
                     - card number input
                     - expiration date label
                     - expiration date input
+                    - cvc label
+                    - cvc inputh
                     - apply button
          - shipping address
          - shipping address drop down menu
@@ -336,6 +335,21 @@ reuse general colors(5-6 additional colors), styles, components
         - expiration date textfield
         - edit button (reuseable)
             - edits user card info names, card number, expiration date
+        - see all cards button
+            - opens a modal list of all cards and gives you the option to choose one of them
+        - add new card
+            -  opens up a modal for adding a new card
+            - first name label
+            - first name textfield
+            - last name label
+            - last name textfield
+            - card number label
+            - card number textfield
+            - cvc label
+            - cvc textfield
+            - payment options
+                - tells you which payment options are supported
+            - add button
         - apply button (reuseable)
             - apply any changes
 
