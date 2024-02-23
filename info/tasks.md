@@ -73,8 +73,14 @@ reuse general colors(5-6 additional colors), styles, components
                     - button send
     - navigation container
         - profile info
-        <!-- /da go opisha kolko diva i kude i za kakvo validacii za parolata po maila posle kakva shte e parolata glavni cifri ... / -->
-            - short description about yourself, the books you are interested in 
+            - 3 divs
+                - 1 div
+                    - profile img
+                        - you can choose profle picture after you go into profile info
+                - 2 div
+                    - names next to the profile img
+                - 3 div 
+                    - under profile pic and names, information about in what books are you interested in, textfield                    
         - favorites
         - card details
     - profile info container
@@ -122,6 +128,7 @@ reuse general colors(5-6 additional colors), styles, components
         - confirm password textfield (reuseable)
         - e-mail textfield (reuseable)
         - sign up button (reuseable)
+            - e-mail validation click here and your profile will be ready/created
 3. Cart page
     - left product container
         - product title
