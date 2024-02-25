@@ -1,0 +1,129 @@
+:root {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #E9C46A;
+    margin: 0;
+
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: #E76F51;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    justify-content: space-around;
+}
+
+header img, header h1, header .fa-cart-shopping {
+    height: auto;
+}
+
+header a, a:visited {
+    text-decoration: none;
+ } 
+
+header img {
+    width: 7em; 
+    border-radius: 10px;
+}
+
+header h1 {
+    font-size: 36px;
+}
+
+
+.login-container {
+    margin-top: 10em; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #373737;
+    padding: 20px;
+    border-radius: 5px;
+    
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+
+}
+
+#username-email {
+    display: flex;
+    flex-direction: row;
+}
+
+#username {
+    display: flex;
+    flex-direction: column;
+}
+
+#email {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 5px;
+    margin-bottom: 10px;
+    width: 200px;
+}
+
+button {
+    padding: 10px 20px;
+    margin-bottom: 10px;
+}
+
+a {
+    margin-bottom: 10px;
+}
+
+#button-container{
+    display: flex;
+    flex-direction: row;
+    margin: 1em;
+}
+
+#change-forgot-password{
+    display: flex;
+    flex-direction: column;
+    margin: 0 1em;
+}
+
+.login-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.signup {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}

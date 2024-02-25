@@ -53,18 +53,53 @@ main {
     flex: 1; 
 }
 
-#tabs, #books, #filter {
+#tabs, #books-section, #filter {
     flex: 1; 
     padding: 0 20px; 
     width: 100%; 
 }
 
-#tabs {
+#tabs { 
+    margin-top: 1.5em;
+    margin-left: 2.5em;
+    margin-right: 2.5em;
+    text-align: center;
     border: 1px solid black;
+    text-decoration: none;
 }
 
-#books {
+#tabs, a {
+    color: rgba(0, 0, 0, 0.858);
+    text-decoration: none;
+}
+
+#tabs, h3 {
+    border: 1px solid black;
+    margin: 1em;
+    border-radius: 1em;
+    padding: 1.7em
+    
+}
+
+#books-section{
     flex: 3; 
+    
+}
+
+#books, #topsellers {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-top: 1.5em;
+    margin-left: 2.5em;
+    margin-right: 2.5em;
+    text-align: center;
+    
+}
+
+#books-section, .book {
+    border: 1px solid black;
+    margin: 1em;
+    border-radius: 1em;
 }
 
 footer {
