@@ -102,6 +102,12 @@ main {
     border-radius: 1em;
 }
 
+#filter {
+    border: 1px solid black;
+    margin: 1em;
+    border-radius: 1em
+ }
+
 footer {
     display: flex;
     align-items: center;

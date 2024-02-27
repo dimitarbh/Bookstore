@@ -1,0 +1,113 @@
+:root {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #E9C46A;
+    margin: 0;
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    background-color: #E76F51;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+header img, header h1 {
+    height: auto;
+}
+
+header img {
+    width: 7em; 
+    border-radius: 10px;
+    margin-left: 6em; 
+}
+
+header h1 {
+    font-size: 36px;
+    text-align: center; 
+    flex-grow: 1; 
+    margin-right: 6.3em;
+}
+
+header a, a:visited {
+    text-decoration: none;
+ } 
+
+header img {
+    width: 7em; 
+    border-radius: 10px;
+}
+
+header h1 {
+    font-size: 36px;
+}
+
+.signUp-container {
+    margin-top: 10em; 
+    margin-left: 16em;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #373737;
+    border-radius: 5px;
+    padding: 3em; 
+    border: 1px solid #373737;
+    width: 60%;
+    align-items: center;
+}
+
+.label-input-column {
+    display: flex;
+    flex-direction: column;
+    margin: 0.8em;
+}
+
+#username-email {
+    display: flex;
+    flex-direction: row;
+    padding: 0.8em;
+}
+
+#passwords {
+    display: flex;
+    flex-direction: row;
+    padding: 1em;
+}
+
+label {
+    font-size: 16px;
+    color: #333;
+}
+
+input[type="username"],
+input[type="email"],
+input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 250px;
+    margin-top: 5px;
+}
+  
+
+input[type="text"]:focus {
+    border-color: #007bff; 
+    outline: none;
+}
+
+#signUp-btn {
+    margin-top: 1em; 
+    align-self: flex-end; 
+}
