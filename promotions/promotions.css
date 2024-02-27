@@ -1,0 +1,63 @@
+:root {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: #E9C46A;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    margin-top: 8.6em; 
+    margin-bottom: 2.6em; 
+    padding-bottom: 2.6em; 
+    flex: 1; 
+}
+
+#header {
+    display: flex;
+    align-items: center; 
+    justify-content: space-around; 
+    position: fixed;
+    top: 0;
+    left: 1em;
+    right: 1em;
+    width: 94%;
+    padding: 10px;
+    
+}
+
+#header h1 {
+    text-align: center; 
+    width: 100%; 
+}
+
+#header, a {
+    font-size: 1.5em;
+    color: rgb(15, 15, 15);
+}
+
+#books-section{
+    flex: 2; 
+    
+}
+
+#books {
+    display: grid;
+    grid-template-columns: auto auto ;
+    margin-top: 1.5em;
+    margin-left: 2.5em;
+    margin-right: 2.5em;
+    text-align: center;
+    
+}
+
+#books-section, .book {
+    border: 1px solid black;
+    margin: 1em;
+    border-radius: 1em;
+}

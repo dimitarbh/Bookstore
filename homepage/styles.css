@@ -48,8 +48,9 @@ header .fa-cart-shopping {
 
 main {
     display: flex;
-    margin-top: 4em; 
-    padding-top: 4em; 
+    margin-top: 8.6em; 
+    margin-bottom: 2.6em; 
+    padding-bottom: 2.6em; 
     flex: 1; 
 }
 
@@ -103,10 +104,44 @@ main {
 }
 
 #filter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
     border: 1px solid black;
     margin: 1em;
-    border-radius: 1em
+    border-radius: 1em;
+
  }
+
+#filter label,
+#filter input,
+#filter button {
+    margin-top: 4em;
+}
+
+#filter-btns {
+    display: flex;
+    justify-content: space-around;
+}
+
+#filter form {
+    justify-content: space-between;
+}
+
+#filter #label-input {
+    display: flex;
+    flex-direction: column;
+}
+
+#filter .label-input-part {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
 
 footer {
     display: flex;
@@ -131,3 +166,19 @@ footer span {
 footer a:hover {
     text-decoration: underline; 
 }
+
+#logo{
+    display: flex;
+    margin-right: 1.5em;
+}
+
+#logo a {
+    margin: 0 0.4em;
+    font-size: 0.3em;
+}
+
+#logo img {
+    width: 20px; 
+    height: auto;
+}
+

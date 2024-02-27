@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="signUp.js"></script>
+    <script type="module" src="/logIn/signUp/signUp.js"></script>
     <link rel="stylesheet" href="signUp.css">
 </head>
 <body>
@@ -15,7 +15,23 @@
     </header>
 
     <main>
-        <div class="signUp-container">
+        <form id="registration-form">
+            <label for="username">Username:</label><br/>
+            <input type="username" id="username" name="username">
+
+            <label for="email">E-Mail:</label><br/>
+            <input type="email" id="email" name="email">
+            
+            <label for="password">Password:</label><br/>
+            <input type="password" id="password" name="password">
+            
+            <label for="password">Confirm password:</label><br/>
+            <input type="password" id="password" name="password">
+
+            <input type="submit" value="register">
+        </form>
+        
+        <!-- <div class="signUp-container">
             <div class="form-container">
                 <div id="data-container">
                     <div id="username-email">
@@ -43,7 +59,7 @@
             <div id="button-container">
                 <button id="signUp-btn">Sign Up</button>
             </div>
-        </div>
+        </div> -->
     </main>
 </body>
 </html>
