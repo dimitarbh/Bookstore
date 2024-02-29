@@ -1,20 +1,19 @@
 document.getElementById("login-form").addEventListener("submit", function(event) {
     event.preventDefault();
 
-    const formData = new FormData(event.target)
-
-    let data = {};
+    const formData = new FormData(event.target);
+    const jsonData = {}
 
     formData.forEach((value, key) => {
-        data[key] = value;
-    })
-    
+        jsonData[key] = value;
+    });
+
     fetch('https://bookstorebe-production.up.railway.app/auth/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(data)
+        body: JSON.stringify(jsonData)
     })
     .then(response => {
         if (!response.ok) {
@@ -22,12 +21,10 @@ document.getElementById("login-form").addEventListener("submit", function(event)
         }
         return response.json();
     })
-    .then(data => {
-        console.log('Log In successful:', data);
+    .then(jsonData => {
+        console.log('Log In successful:', jsonData);
     })
     .catch(error => {
         console.error('There was a problem with the log in:', error);
     });
-
-})
-
+});
