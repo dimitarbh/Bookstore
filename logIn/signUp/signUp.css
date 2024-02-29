@@ -9,6 +9,7 @@ body {
     min-height: 100vh;
     background-color: #E9C46A;
     margin: 0;
+    font-family: Arial, sans-serif;
 
 }
 
@@ -54,22 +55,60 @@ header h1 {
     font-size: 36px;
 }
 
-#registration-form {
-    margin-top: 10em; 
-    margin-left: 16em;
+main {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#registration-form {
+    display: flex;
+    flex-direction: row; 
     flex-direction: column;
     border: 1px solid #373737;
     border-radius: 5px;
-    padding: 3em; 
+    padding: 3em 0; 
     border: 1px solid #373737;
     width: 60%;
     align-items: center;
 }
 
+#registration-form input[type="submit"] {
+    background-color: #E76F51;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#registration-form input[type="submit"]:hover {
+    background-color: #FF7A59;
+}
+
 label {
     font-size: 16px;
     color: #333;
+    text-align: center;
+}
+
+.form-row {
+    display: flex;
+    margin-bottom: 1em;
+    align-items: center;
+}
+
+.form-row label {
+    width: 150px; 
+    margin-right: 10px;
+    text-align: right;
+}
+
+.form-row input {
+    flex: 1;
+    padding: 5px;
 }
 
 input[type="username"],
@@ -83,13 +122,3 @@ input[type="password"] {
     margin-top: 5px;
 }
   
-
-input[type="text"]:focus {
-    border-color: #007bff; 
-    outline: none;
-}
-
-#signUp-btn {
-    margin-top: 1em; 
-    align-self: flex-end; 
-}

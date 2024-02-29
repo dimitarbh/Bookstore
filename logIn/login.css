@@ -9,11 +9,13 @@ body {
     min-height: 100vh;
     background-color: #E9C46A;
     margin: 0;
+    font-family: Arial, sans-serif;
 
 }
 
 header {
     display: flex;
+    justify-content: space-between; 
     align-items: center;
     background-color: #E76F51;
     padding: 10px;
@@ -21,12 +23,23 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 999;
-    justify-content: space-around;
 }
 
-header img, header h1, header .fa-cart-shopping {
+header img, header h1 {
     height: auto;
+}
+
+header img {
+    width: 7em; 
+    border-radius: 10px;
+    margin-left: 6em; 
+}
+
+header h1 {
+    font-size: 36px;
+    text-align: center; 
+    flex-grow: 1; 
+    margin-right: 6.3em;
 }
 
 header a, a:visited {
@@ -42,60 +55,78 @@ header h1 {
     font-size: 36px;
 }
 
-
-.login-container {
-    margin-top: 10em; 
+main {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
+}
+
+#login-form {
+    display: flex;
+    flex-direction: row; 
+    flex-direction: column;
     border: 1px solid #373737;
-    padding: 20px;
     border-radius: 5px;
-    padding: 3em; 
+    padding: 3em 0; 
+    border: 1px solid #373737;
+    width: 60%;
+    align-items: center;
+    margin-left: 0;
 }
 
-.form-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 10px;
-
+#login-form input[type="submit"] {
+    background-color: #E76F51;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-#username-email {
-    display: flex;
-    flex-direction: row;
-}
-
-#username {
-    display: flex;
-    flex-direction: column;
-}
-
-#email {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1em;
+#login-form input[type="submit"]:hover {
+    background-color: #FF7A59;
 }
 
 label {
-    margin-bottom: 5px;
+    font-size: 16px;
+    color: #333;
+    text-align: center;
 }
 
-input {
+.form-row {
+    display: flex;
+    margin-bottom: 1em;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.form-row label {
+    width: auto; 
+    margin-right: 10px;
+    text-align: right;
+    
+}
+
+.form-row input {
+    flex: 1;
     padding: 5px;
-    margin-bottom: 10px;
-    width: 200px;
+    width: 100%;
+    margin-left: 10px;
+    
 }
 
-button {
-    padding: 10px 20px;
-    margin-bottom: 10px;
-}
-
-a {
-    margin-bottom: 10px;
+input[type="username"],
+input[type="email"],
+input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 250px;
+    margin-top: 5px;
 }
 
 #button-container{
@@ -108,6 +139,7 @@ a {
     display: flex;
     flex-direction: column;
     margin: 0 1em;
+    text-align: center;
     
 }
 
@@ -127,15 +159,25 @@ a {
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
 }
 
-.signup {
-    background-color: #28a745;
+.login-btn:hover {
+    background-color: #0055af;
+}
+
+.signup-btn {
+    background-color: #28a745; 
     color: white;
     border: none;
-    padding: 5px 10px;
-    border-radius: 3px;
+    padding: 10px 20px;
+    border-radius: 5px;
     cursor: pointer;
+    text-decoration: none; 
+    font-size: 16px;
 }
 
+.signup-btn:hover {
+    background-color: #218838;
+}
 

@@ -10,56 +10,35 @@
 <body>
 
     <header>
-        <a href="https://www.bookstore.com/homepage"><img src="/images/png/logo-color.png" alt="Logo"/></a>
+        <a href="/homepage/index.html"><img src="/images/png/logo-color.png" alt="Logo"/></a>
         <h1>Bookstore</h1>
     </header>
 
     <main>
         <form id="registration-form">
-            <label for="username">Username:</label><br/>
-            <input type="username" id="username" name="username">
-
-            <label for="email">E-Mail:</label><br/>
-            <input type="email" id="email" name="email">
+            <div class="form-row">
+                <label for="username">Username:</label>
+                <input type="username" id="username" name="username">
+            </div>
+        
+            <div class="form-row">
+                <label for="email">E-Mail:</label>
+                <input type="email" id="email" name="email">
+            </div>
             
-            <label for="password">Password:</label><br/>
-            <input type="password" id="password" name="password">
+            <div class="form-row">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password">
+            </div>
             
-            <label for="password">Confirm password:</label><br/>
-            <input type="password" id="password" name="password">
-
-            <input type="submit" value="register">
+            <div class="form-row">
+                <label for="confirm-password">Confirm password:</label>
+                <input type="password" id="confirm-password" name="confirm-password">
+            </div>
+        
+            <input type="submit" value="Register">
         </form>
         
-        <!-- <div class="signUp-container">
-            <div class="form-container">
-                <div id="data-container">
-                    <div id="username-email">
-                        <div class="label-input-column">
-                            <label for="username">Username:</label>
-                            <input type="username" id="username" name="username">
-                        </div>
-                        <div class="label-input-column">
-                            <label for="email">Email:</label>
-                            <input type="email" id="email" name="email">
-                        </div>
-                    </div>
-                    <div id="passwords">
-                        <div class="label-input-column" id="e-mail">
-                            <label for="password">Password:</label>
-                            <input type="password" id="password" name="password">
-                        </div>  
-                        <div class="label-input-column">
-                            <label for="password">Confirm password:</label>
-                            <input type="password" id="password" name="password">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="button-container">
-                <button id="signUp-btn">Sign Up</button>
-            </div>
-        </div> -->
     </main>
 </body>
 </html>
