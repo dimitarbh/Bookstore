@@ -66,6 +66,7 @@ main {
     margin-right: 2.5em;
     text-align: center;
     border: 1px solid black;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     text-decoration: none;
 }
 
@@ -82,6 +83,10 @@ main {
     
 }
 
+#tabs h3:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
 #books-section{
     flex: 3; 
     
@@ -94,13 +99,21 @@ main {
     margin-left: 2.5em;
     margin-right: 2.5em;
     text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 1em;
+    padding: 2em;
     
 }
 
 #books-section, .book {
     border: 1px solid black;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     margin: 1em;
     border-radius: 1em;
+}
+
+.book:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 #filter {
@@ -114,49 +127,80 @@ main {
 
  }
 
-#filter label,
-#filter input,
-#filter button {
-    margin-top: 0.5em
+#filter h5 {
+    font-size: 1em;
 }
 
 #filter input[type="text"] {
     width: 100%; 
-    padding: 0.72em;
+    padding: 0.5em 0.6em;
     border: 1px solid rgba(0, 0, 0, 0.5);
     border-radius: 10px;
-    font-size: 16px;
+    font-size: 15px;
     color: rgba(0, 0, 0, 0.7);
-    background-color: #fff;
-    outline: none;
+    background-color: #f9efc2;
 }
 
-#filter > div {
-    margin-bottom: 2em;
+#filter input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 18px;
+    height: 18px;
+    background-color: #f9efc2;
+    border: 1px solid #000000;
+    cursor: pointer;
+    align-items: center;
+}
+
+#filter input[type="checkbox"]:checked::before {
+    content: "\2713";
+    color: #3d3d3d; 
+    font-size: 20px; 
+    text-align: center;
+    line-height: 18px; 
+}
+
+#filter input[type="text"],
+#filter input[type="checkbox"] {
+    margin-bottom: 1em;
 }
 
 #filter #label-input {
     display: flex;
     flex-direction: column;
-    align-items: stretch;
-    text-align: left;
-    
+    text-align: end;
+    margin-top: 0.5em;
 }
 
 #filter .label-input-part {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 0;
-    padding: 0;
+    margin-bottom: 0.5em;
 }
 
+#buttons button {
+    padding: 0.5em 1em;
+    border-radius: 1em;
+    margin-top: 1em; 
+    margin-right: 1em;
+    margin-left: 1em;
+}
+
+#filter #reset {
+    background-color: #E76F51;
+}
+
+#filter #apply {
+    background-color: #28a745; 
+}
 
 footer {
     display: flex;
     align-items: center;
     background-color: #E76F51;
-    padding: 10px;
+    padding: 0.2em;
     position: fixed; 
     width: 100%; 
     bottom: 0; 
