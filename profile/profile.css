@@ -29,6 +29,7 @@ body {
 #header, a {
     font-size: 1.5em;
     color: rgb(15, 15, 15);
+    padding-left: 0.7em;
 }
 
 #nav {
@@ -143,12 +144,12 @@ button {
 }
 
 .uploaded-image {
-    max-width: 200px; /* Adjust the maximum width as needed */
-    max-height: 200px; /* Adjust the maximum height as needed */
+    max-width: 200px; 
+    max-height: 200px;
 }
 
 #image-upload-label {
     background-color: #e17257;
     padding: 0.5em 1em;
-    border-radius: 1em;
+    border-radius: 0.5em;
 }

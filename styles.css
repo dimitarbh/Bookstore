@@ -131,6 +131,7 @@ main {
 
 #filter h5 {
     font-size: 1em;
+    margin-bottom: 0.5em;
 }
 
 #filter input[type="text"] {
@@ -203,11 +204,11 @@ main {
 }
 
 #filter #reset {
-    background-color: #E76F51;
+    background-color: #e78066;
 }
 
 #filter #apply {
-    background-color: #28a745; 
+    background-color: #4b9e5e; 
 }
 
 footer {
@@ -223,6 +224,7 @@ footer {
 footer a, footer span {
     color: rgb(15, 15, 15);
     text-decoration: none; 
+    padding-left:  1.5em;
 }
 
 footer span {
