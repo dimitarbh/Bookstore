@@ -22,12 +22,20 @@
         </section>
 
         <section id="profile-info">
-            <div id="profile-info-img"><i class="fa-solid fa-user"></i></div>
-            <!-- //да си го сложа в отделен див -->
-            <div id="profile-info-name">Peter Griffin</div>
-            <div id="profile-info-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit itaque quod dolorem aliquid molestias nulla ex, qui nesciunt tempore assumenda?</div>
-            <button>Edit</button>
-        </section>  
+            <div id="profile-info-img"><img src="" id="profile-image" class="fa-solid fa-user"></i></div>
+            <div id="profile-info-details">
+                <div id="profile-info-name">Peter Griffin</div>
+                <div id="profile-info-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit itaque quod dolorem aliquid molestias nulla ex, qui nesciunt tempore assumenda?</div>
+                <div id="edit-profile" style="display: none;">
+                    <input type="text" id="edit-name" value="Peter Griffin">
+                    <textarea id="edit-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit itaque quod dolorem aliquid molestias nulla ex, qui nesciunt tempore assumenda?</textarea>
+                    <input type="file" id="image-upload" accept="image/*" style="display: none;">
+                    <label for="image-upload" id="image-upload-label">Choose Profile Image</label>
+                </div>
+            </div>
+            <button id="edit-button">Edit</button>
+            <button id="save-button" style="display: none;">Save</button>
+        </section>
     </main>
 </body>
 </html>

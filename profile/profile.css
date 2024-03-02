@@ -16,9 +16,9 @@ body {
     justify-content: space-between; 
     position: fixed;
     top: 0;
-    left: 1em;
+    left: 0;
     width: 100%;
-    padding: 10px;
+    background-color: #E76F51;
 }
 
 #header h1 {
@@ -32,17 +32,19 @@ body {
 }
 
 #nav {
-    margin-top: 4em;
+    margin-top: 5em;
     padding-top: 4em;
     display: flex;
     width: 94vw;
     padding: 0;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 1em;
 }
 
 #nav div {
     flex-grow: 1;
     padding: 20px;
-    background-color: #ffffff;
+    background-color: #e17257;
     text-align: center;
     justify-content: space-between;
     border: 1px solid rgb(62, 62, 62);
@@ -55,19 +57,36 @@ body {
     justify-content: space-around;
 }
 
+section #nav,
+section #profile-info {
+    border: 2px solid  black;
+}
+
 #profile-info {
     display: flex;
     flex-direction: column;
-    border: 1px solid rgb(62, 62, 62);
     border-radius: 10px;
     text-align: center;
     align-items: center;
-    margin: 1em;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 1em;
+    margin-top: 4em;
+    padding-top: 4em;
+    display: flex;
+    width: 94vw;
+    padding: 0;
+}
+
+#profile-info .row {
+    display: flex;
+    flex-direction: row;
 }
 
 #profile-info-img {
     font-size: 2em;
     margin: 1em;
+    
+    
 }
 
 #profile-info-name {
@@ -82,4 +101,54 @@ body {
 button {
     align-self: end;
     margin: 1em;
+}
+
+#edit-profile {
+    display: none;
+}
+
+#edit-name,
+#edit-description {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#edit-description {
+    height: 100px; 
+
+}
+#edit-button,
+#save-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#save-button {
+    background-color: #28a745;
+}
+
+#edit-button:hover,
+#save-button:hover {
+    background-color: #0056b3;
+}
+
+.uploaded-image {
+    max-width: 200px; /* Adjust the maximum width as needed */
+    max-height: 200px; /* Adjust the maximum height as needed */
+}
+
+#image-upload-label {
+    background-color: #e17257;
+    padding: 0.5em 1em;
+    border-radius: 1em;
 }

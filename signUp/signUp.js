@@ -24,6 +24,7 @@ document.getElementById("registration-form").addEventListener("submit", function
     })
     .then(data => {
         console.log('Registration successful:', data);
+        window.location.href = "../profile/profile.html"
     })
     .catch(error => {
         console.error('There was a problem with the registration:', error);
