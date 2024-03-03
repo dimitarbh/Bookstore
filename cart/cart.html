@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="cart.js"></script>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    <header>
+        <a href="../index.html"><img src="/images/png/logo-color.png" alt="Logo"/></a>
+        <h1>Bookstore</h1>
+    </header>
+    <main>
+        <section >
+            <div id="products">
+                <h2>Added Products</h2>
+                <ul id="product-list">
+                    <li>Book 1 by Author 1 - $20</li>
+                    <li>Book 2 by Author 2 - $25</li>
+                    <li>Book 3 by Author 3 - $30</li>
+                    <li>Book 4 by Author 4 - $15</li>
+                    <li>Book 5 by Author 5 - $18</li>
+                </ul>
+            </div>
+        </section>
+        
+        
+        <section id="payment-details">
+            <h2>Payment details</h2>
+            <form id="payment-form">
+                <div>
+                    <div id="card-add-card">
+                        <label for="card" >Card:</label>
+                        <button type="button" id="add-card">Add Card</button>
+                    </div>
+                    <input type="text" id="card" name="card">
+                </div>
+
+                <div>
+                    <label for="shipping-address">Shipping Address:</label>
+                    <input type="text" id="shipping-address" name="shipping-address">
+                </div>
+
+                <div>
+                    <label for="total-sum">Total Sum:</label>
+                    <input type="text" id="total-sum" name="total-sum" readonly>
+                </div>
+
+                <button type="submit" id="buy-button">Buy</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

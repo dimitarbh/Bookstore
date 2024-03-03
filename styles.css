@@ -21,6 +21,7 @@ header {
     width: 100%;
     z-index: 999;
     justify-content: space-around;
+    padding-left: 0;
 }
 
 header img, header h1, header .fa-cart-shopping {
@@ -205,10 +206,22 @@ main {
 
 #filter #reset {
     background-color: #e78066;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 #filter #apply {
     background-color: #4b9e5e; 
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#filter #reset:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+} 
+
+#filter #apply:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
 }
 
 footer {
