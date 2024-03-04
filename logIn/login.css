@@ -39,7 +39,7 @@ header h1 {
     font-size: 36px;
     text-align: center; 
     flex-grow: 1; 
-    margin-right: 6.3em;
+    margin-right: 5em;
 }
 
 header a, a:visited {
@@ -49,10 +49,6 @@ header a, a:visited {
 header img {
     width: 7em; 
     border-radius: 10px;
-}
-
-header h1 {
-    font-size: 36px;
 }
 
 main {
