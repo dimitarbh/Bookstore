@@ -46,5 +46,33 @@
             <a href="#"><img src="../images/svg/social media/5335781_camera_instagram_social media_instagram logo_icon (2).png"></a>
         </div>
     </footer>
-</body>
+    <script>
+        const token = localStorage.getItem('token');
+
+        if (!token) {
+            window.location.href = "../login.html";
+        } else {
+            fetch('https://dimitarbh.github.io/Bookstore/profile/profile.html', {
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(profileData => {
+                    const name = profileData.name;
+                    const description = profileData.description;
+                    document.getElementById('profile-info-name').textContent = name;
+                    document.getElementById('profile-info-description').textContent = description;
+                })
+                .catch(error => {
+                    console.error('There was a problem fetching profile data:', error);
+                });
+        }
+    </script>
+    </body>
 </html>

@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function(){
         })
         .then(jsonData => {
             console.log('Log In successful:', jsonData);
+            localStorage.setItem('token', jsonData.token);
             window.location.href = "../profile/profile.html"
         })
         .catch(error => {
