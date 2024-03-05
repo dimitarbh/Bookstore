@@ -1,3 +1,5 @@
+const { Token } = require("@mui/icons-material");
+
 document.addEventListener("DOMContentLoaded", function() {
     const profileNameElement = document.querySelector("#profile-info-name");
     const profileDescriptionElement = document.querySelector("#profile-info-description");
@@ -8,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const saveButton = document.querySelector("#save-button");
     const profileImageElement = document.querySelector("#profile-image");
     const imageUploadInput = document.querySelector("#image-upload");
+    const token = localStorage.getItem("token");
 
     editButton.addEventListener("click", function() {
         profileNameElement.style.display = "none";
@@ -46,11 +49,12 @@ document.addEventListener("DOMContentLoaded", function() {
             reader.readAsDataURL(file);
         }
     });
-
+    
+    
     fetch('https://bookstorebe-production.up.railway.app/auth/profile', {
         method: 'GET',
         headers: {
-            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`,
         }
     })
     .then(response => {

@@ -23,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function(){
             return response.json();
         })
         .then(jsonData => {
-            console.log('Log In successful:', jsonData);
             localStorage.setItem('token', jsonData.token);
             window.location.href = "../profile/profile.html"
         })
