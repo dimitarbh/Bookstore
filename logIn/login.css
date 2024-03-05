@@ -23,6 +23,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
+    border-bottom: 1px solid black;
 }
 
 header img, header h1 {
@@ -39,7 +40,7 @@ header h1 {
     font-size: 36px;
     text-align: center; 
     flex-grow: 1; 
-    margin-right: 5em;
+    margin-right: 5.1em;
 }
 
 header a, a:visited {
@@ -177,5 +178,45 @@ input[type="password"] {
 
 .signup-btn:hover {
     background-color: #218838;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    background-color: #E76F51;
+    width: 100%; 
+    bottom: 0; 
+    overflow: hidden;
+    border-top: 1px solid black;
+}
+
+footer a, footer span {
+    color: rgb(15, 15, 15);
+    text-decoration: none; 
+    padding-left:  1.5em;
+}
+
+footer span {
+    text-align: center;
+    flex-grow: 1;
+}
+
+footer a:hover {
+    text-decoration: underline; 
+}
+
+#logo{
+    display: flex;
+    margin-right: 1.5em;
+}
+
+#logo a {
+    margin: 0 0.4em;
+    font-size: 0.3em;
+}
+
+#logo img {
+    width: 20px; 
+    height: auto;
 }
 

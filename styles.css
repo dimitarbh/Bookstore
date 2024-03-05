@@ -4,7 +4,6 @@
 }
 
 body {
-    /* display: flex; */
     min-height: 100vh;
     background-color: #E9C46A;
     margin: 0;
@@ -21,6 +20,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
+    border-bottom: 1px solid black;
 }
 
 header img, header h1 {
@@ -239,6 +239,7 @@ footer {
     width: 100%; 
     bottom: 0; 
     overflow: hidden;
+    border-top: 1px solid black;
 }
 
 footer a, footer span {

@@ -1,39 +1,57 @@
 :root {
-    padding: 0;
-    margin: 2em; 
+    padding: 0; 
     background-color: #E9C46A;
 }
 
 body {
     display: flex;
+    flex-direction: column;
     min-height: 100vh;
     background-color: #E9C46A;
+    font-family: Arial, sans-serif;
+    margin: 0; 
 }
 
-#header {
+header {
     display: flex;
-    align-items: center; 
     justify-content: space-between; 
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+    align-items: center;
     background-color: #E76F51;
+    padding: 10px;
+    width: 100%;
+    border-bottom: 1px solid black;
+    box-sizing: border-box;
 }
 
-#header h1 {
+header img, header h1 {
+    height: auto;
+}
+
+header img {
+    width: 7em; 
+    border-radius: 10px;
+    margin-left: 6em; 
+}
+
+header h1 {
+    font-size: 36px;
     text-align: center; 
-    width: 100%; 
+    flex-grow: 1; 
+    margin-right: 5em;
 }
 
-#header, a {
-    font-size: 1.5em;
-    color: rgb(15, 15, 15);
-    padding-left: 0.7em;
+header a, a:visited {
+    text-decoration: none;
+} 
+
+section {
+    margin: auto;
+    justify-content: center; 
+    align-items: center; 
 }
 
 #nav {
-    margin-top: 5em;
+    margin-top: 7em;
     padding-top: 4em;
     display: flex;
     width: 94vw;
@@ -50,7 +68,7 @@ body {
     justify-content: space-between;
     border: 1px solid rgb(62, 62, 62);
     border-radius: 10px;
-    margin: 1em
+    margin: 1em;
 }
 
 #nav a {
@@ -86,8 +104,6 @@ section #profile-info {
 #profile-info-img {
     font-size: 2em;
     margin: 1em;
-    
-    
 }
 
 #profile-info-name {
@@ -120,8 +136,8 @@ button {
 
 #edit-description {
     height: 100px; 
-
 }
+
 #edit-button,
 #save-button {
     background-color: #007bff;
@@ -152,5 +168,45 @@ button {
     background-color: #e17257;
     padding: 0.5em 1em;
     border-radius: 0.5em;
-    
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #E76F51;
+    border-top: 1px solid black;
+    width: 100%; 
+    box-sizing: border-box; 
+    margin-top: 5em;
+}
+
+footer a, footer span {
+    color: rgb(15, 15, 15);
+    text-decoration: none; 
+    padding-left:  1.5em;
+}
+
+footer span {
+    text-align: center;
+    flex-grow: 1;
+}
+
+footer a:hover {
+    text-decoration: underline; 
+}
+
+footer #logo{
+    display: flex;
+    margin-right: 1.5em;
+}
+
+footer #logo a {
+    margin: 0 0.4em;
+    font-size: 0.3em;
+}
+
+footer #logo img {
+    width: 20px; 
+    height: auto;
 }
