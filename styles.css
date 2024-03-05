@@ -67,6 +67,7 @@ main {
     flex: 1; 
     padding: 0 20px; 
     width: 100%; 
+    
 }
 
 #tabs { 
@@ -99,6 +100,7 @@ main {
 #books-section{
     flex: 3; 
     
+    
 }
 
 #books, #topsellers {
@@ -119,6 +121,10 @@ main {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     margin: 1em;
     border-radius: 1em;
+}
+
+#books-section ul {
+    list-style-type: none; /* Remove bullet points */
 }
 
 .book:hover {
