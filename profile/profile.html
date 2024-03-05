@@ -52,7 +52,7 @@
         if (!token) {
             window.location.href = "../logIn/login.html";
         } else {
-            fetch('https://dimitarbh.github.io/Bookstore/profile/profile.html', {
+            fetch('https://bookstorebe-production.up.railway.app/auth/profile', {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
