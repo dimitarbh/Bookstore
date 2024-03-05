@@ -124,7 +124,7 @@ main {
 }
 
 #books-section ul {
-    list-style-type: none; /* Remove bullet points */
+    list-style-type: none; 
 }
 
 .book:hover {
