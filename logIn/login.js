@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function(){
         })
         .then(jsonData => {
             localStorage.setItem('token', jsonData.token);
-            window.location.href = "../profile/profile.html"
+            window.location.href = "../profile/profile.html" ///taka i za ostanalite
         })
         .catch(error => {
             console.error('There was a problem with the log in:', error);
