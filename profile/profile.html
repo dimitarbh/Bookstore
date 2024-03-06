@@ -71,6 +71,7 @@
                 })
                 .catch(error => {
                 window.location.href = "../logIn/login.html";
+                console.log("You have to log in first")
                 console.error(errorMessage, error);
 
                 alert(errorMessage);
