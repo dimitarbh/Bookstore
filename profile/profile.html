@@ -70,8 +70,13 @@
                     document.getElementById('profile-info-description').textContent = description;
                 })
                 .catch(error => {
-                    console.error('There was a problem fetching profile data:', error);
-                });
+                const errorMessage = 'There was a problem fetching profile data. Please try again later.';
+                console.error(errorMessage, error);
+
+                alert(errorMessage);
+
+                window.location.href = "../logIn/login.html";
+            });
         }
     </script>
     </body>
