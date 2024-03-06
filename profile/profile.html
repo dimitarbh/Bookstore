@@ -70,12 +70,11 @@
                     document.getElementById('profile-info-description').textContent = description;
                 })
                 .catch(error => {
-                const errorMessage = 'There was a problem fetching profile data. Please try again later.';
+                window.location.href = "../logIn/login.html";
                 console.error(errorMessage, error);
 
                 alert(errorMessage);
 
-                window.location.href = "../logIn/login.html";
             });
         }
     </script>
