@@ -4,6 +4,8 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
     background-color: #E9C46A;
     margin: 0;
@@ -77,12 +79,13 @@ main {
     margin-bottom: 2.6em; 
     padding-bottom: 2.6em; 
     flex: 1; 
+    flex-grow: 1;
 }
 
 #tabs, #books-section, #filter {
     flex: 1; 
-    padding: 0 20px; 
-    width: 100%; 
+    width: 100%;
+    height: auto;
     
 }
 
@@ -143,6 +146,25 @@ main {
     list-style-type: none; 
 }
 
+.book {
+    border: 1px solid black;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 1em;
+    border-radius: 1em;
+    padding: 1em;
+}
+
+.author, .description, .publisher, .price, .discounted-price, .top-selling, .created-at {
+    margin: 0.5em 0;
+}
+
+.cover-image {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 0.5em;
+}
+
 .book:hover {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
@@ -150,13 +172,14 @@ main {
 #filter {
     display: flex;
     flex-direction: column;
-    justify-content: center; 
+    justify-content: flex-start; /* Align items to the start of the container */
+    align-items: center;
     border: 1px solid black;
     margin: 1em;
     border-radius: 1em;
-    align-items: center;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
- }
+    padding: 2em;
+}
 
 
 
@@ -257,9 +280,9 @@ main {
 footer {
     display: flex;
     align-items: center;
+    justify-content: center;
     background-color: #E76F51;
     width: 100%; 
-    bottom: 0; 
     overflow: hidden;
     border-top: 1px solid black;
 }

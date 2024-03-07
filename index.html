@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Bookstore</title>
         <script src="https://kit.fontawesome.com/867ac855f7.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
         <script src="main.js"></script>
         <link rel="stylesheet" href="styles.css">
     </head>
@@ -112,6 +113,29 @@
                 </ul>
             </section>
 
+            <script id="book-template" type="text/x-handlebars-template">
+                {{#each books}}
+                    <li class="book">
+                        <h5>{{title}}</h5>
+                        <p class="author">Author: {{author}}</p>
+                        <p class="description">Description: {{description}}</p>
+                        <p class="publisher">Publisher: {{publisher}}</p>
+                        <img class="cover-image" src="{{image}}" alt="Book Cover">
+                        <p class="price">Price: ${{price}}</p>
+                        {{#if discountedPrice}}
+                            <p class="discounted-price">Discounted Price: ${{discountedPrice}}</p>
+                        {{/if}}
+                        <p class="top-selling">Top Selling: {{#if topSelling}}Yes{{else}}No{{/if}}</p>
+                        <p class="created-at">Created At: {{createdAt}}</p>
+                    </li>
+                {{/each}}
+            </script>
+            
+            <script>
+                const source = document.getElementById('book-template').innerHTML;
+                const template = Handlebars.compile(source);
+            </script>
+
             <section id="filter">
                 <div>
                     <h5>
@@ -164,5 +188,6 @@
                 <a href="#"><img src="./images/svg/social media/5335781_camera_instagram_social media_instagram logo_icon (2).png"></a>
             </div>
         </footer>
+        
     </body>
     </html>

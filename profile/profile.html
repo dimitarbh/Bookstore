@@ -70,8 +70,8 @@
                     document.getElementById('profile-info-description').textContent = description;
                 })
                 .catch(error => {
-                window.location.href = "../logIn/login.html";
                 console.log("You have to log in first")
+                window.location.href = "../logIn/login.html";
                 console.error(errorMessage, error);
 
                 alert(errorMessage);
