@@ -23,10 +23,6 @@ header {
     box-sizing: border-box;
 }
 
-header img, header h1 {
-    height: auto;
-}
-
 header img {
     width: 7em; 
     border-radius: 10px;
@@ -40,14 +36,11 @@ header h1 {
     margin-right: 5em;
 }
 
-header a, a:visited {
-    text-decoration: none;
-} 
-
 section {
     margin: auto;
     justify-content: center; 
     align-items: center; 
+    flex-grow: 1;
 }
 
 #nav {
@@ -71,11 +64,6 @@ section {
     margin: 1em;
 }
 
-#nav a {
-    text-decoration: none;
-    justify-content: space-around;
-}
-
 section #nav,
 section #profile-info {
     border: 2px solid  black;
@@ -84,64 +72,65 @@ section #profile-info {
 #profile-info {
     display: flex;
     flex-direction: column;
+    align-items: center;
     border-radius: 10px;
     text-align: center;
-    align-items: center;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border-radius: 1em;
+    padding: 2em;
     margin-top: 4em;
-    padding-top: 4em;
+    margin-bottom: 4em;
+    width: 80%;
+}
+
+#profile-info-details {
     display: flex;
-    width: 94vw;
-    padding: 0;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
 }
 
-#profile-info .row {
-    display: flex;
-    flex-direction: row;
-}
-
-#profile-info-img {
-    font-size: 2em;
-    margin: 1em;
-}
-
-#profile-info-name {
-    align-self: center;
-    margin: 1.5em;
-}
-
+#profile-info-name,
+#profile-info-email,
 #profile-info-description {
-    padding:  2em;
-}
-
-button {
-    align-self: end;
-    margin: 1em;
+    margin-top: 1em;
 }
 
 #edit-profile {
     display: none;
+    width: 80%;
+    background-color: #e17257;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-#edit-name,
-#edit-description {
+#edit-profile input,
+#edit-profile textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
+    background-color: #ffc9bc;;
+    border: 1px solid #d6694d;
     border-radius: 5px;
     font-size: 16px;
 }
 
 #edit-description {
-    height: 100px; 
+    height: 100px;
+}
+
+#image-upload-label,
+#image-upload input {
+    background-color: #ffc9bc;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    margin-bottom: 1em;
 }
 
 #edit-button,
 #save-button {
     background-color: #007bff;
-    color: white;
+    color: rgb(29, 29, 29);
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -159,17 +148,6 @@ button {
     background-color: #0056b3;
 }
 
-.uploaded-image {
-    max-width: 200px; 
-    max-height: 200px;
-}
-
-#image-upload-label {
-    background-color: #e17257;
-    padding: 0.5em 1em;
-    border-radius: 0.5em;
-}
-
 footer {
     display: flex;
     align-items: center;
@@ -178,7 +156,7 @@ footer {
     border-top: 1px solid black;
     width: 100%; 
     box-sizing: border-box; 
-    margin-top: 5em;
+    margin-top: auto;
 }
 
 footer a, footer span {

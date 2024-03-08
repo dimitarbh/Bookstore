@@ -5,34 +5,34 @@ document.addEventListener("DOMContentLoaded", function() {
     if (!token) {
         window.location.href = "../logIn/login.html";
     } else {
-        const profileNameElement = document.querySelector("#profile-info-name");
-        const profileDescriptionElement = document.querySelector("#profile-info-description");
+        const profileUsernameElement = document.querySelector("#profile-info-username");
+        const profileEmailElement = document.querySelector("#profile-info-email");
         const editProfileDiv = document.querySelector("#edit-profile");
-        const editNameInput = document.querySelector("#edit-name");
-        const editDescriptionInput = document.querySelector("#edit-description");
+        const editUsernameInput = document.querySelector("#edit-username");
+        const editEmailInput = document.querySelector("#edit-email");
         const editButton = document.querySelector("#edit-button");
         const saveButton = document.querySelector("#save-button");
         const profileImageElement = document.querySelector("#profile-image");
         const imageUploadInput = document.querySelector("#image-upload");
     
         editButton.addEventListener("click", function() {
-            profileNameElement.style.display = "none";
-            profileDescriptionElement.style.display = "none";
+            profileEmailElement.style.display = "none";
+            profileUsernameElement.style.display = "none";
             editProfileDiv.style.display = "block";
-            editNameInput.value = profileNameElement.textContent;
-            editDescriptionInput.value = profileDescriptionElement.textContent;
+            editUsernameInput.value = profileUsernameElement.textContent;
+            editEmailInput.value = profileEmailElement.textContent;
             editButton.style.display = "none";
             saveButton.style.display = "inline-block";
         });
     
         saveButton.addEventListener("click", function() {
-            profileNameElement.textContent = editNameInput.value;
-            profileDescriptionElement.textContent = editDescriptionInput.value;
-    
-            profileNameElement.style.display = "block";
-            profileDescriptionElement.style.display = "block";
+            profileUsernameElement.textContent = editUsernameInput.value;
+            profileEmailElement.textContent = editEmailInput.value;
+            
+            profileUsernameElement.style.display = "block";
+            profileEmailElement.style.display = "block";
+
             editProfileDiv.style.display = "none";
-    
             saveButton.style.display = "none";
             editButton.style.display = "inline-block";
         });
@@ -67,8 +67,8 @@ document.addEventListener("DOMContentLoaded", function() {
             return response.json();
         })
         .then(data => {
-            profileNameElement.textContent = data.name;
-            profileDescriptionElement.textContent = data.description;
+            profileEmailElement.textContent = data.email;
+            profileUsernameElement.textContent = data.username
         })
         .catch(error => {
             console.error('There was a problem fetching profile data:', error);//kak на  всяка една страница в карт , профиле ако не съм лгона или имам ерор да ме върне към логин пейджа

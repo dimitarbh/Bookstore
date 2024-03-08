@@ -116,11 +116,11 @@
             <script id="book-template" type="text/x-handlebars-template">
                 {{#each books}}
                     <li class="book">
+                        <img class="cover-image" src="{{image}}" alt="Book Cover">
                         <h5>{{title}}</h5>
                         <p class="author">Author: {{author}}</p>
                         <p class="description">Description: {{description}}</p>
                         <p class="publisher">Publisher: {{publisher}}</p>
-                        <img class="cover-image" src="{{image}}" alt="Book Cover">
                         <p class="price">Price: ${{price}}</p>
                         {{#if discountedPrice}}
                             <p class="discounted-price">Discounted Price: ${{discountedPrice}}</p>
