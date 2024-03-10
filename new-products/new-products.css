@@ -1,0 +1,120 @@
+:root {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #E9C46A;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #E76F51;
+    padding: 10px;
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+
+header img {
+    width: 7em;
+    border-radius: 10px;
+    margin-left: 6em;
+}
+
+header h1 {
+    font-size: 36px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+header a, a:visited {
+    text-decoration: none;
+}
+
+header .fa-cart-shopping {
+    margin-right: 3em;
+    font-size: 2.5em;
+    color: rgb(15, 15, 15);
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4em; 
+}
+
+#books-section{
+    flex: 2; 
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+}
+
+#books {
+    display: grid;
+    grid-template-columns: auto auto ;
+    margin-top: 1.5em;
+    margin-left: 2.5em;
+    margin-right: 2.5em;
+    text-align: center;
+    
+}
+
+#books-section, .book {
+    border: 1px solid black;
+    border-radius: 1em;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 1em;
+}
+
+#books-section .book:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #E76F51;
+    border-top: 1px solid black;
+    margin-top: 3em; 
+}
+
+footer a, footer span {
+    color: rgb(15, 15, 15);
+    text-decoration: none;
+    padding-left: 1.5em;
+}
+
+footer span {
+    text-align: center;
+    flex-grow: 1;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+#logo {
+    display: flex;
+    margin-right: 1.5em;
+}
+
+#logo a {
+    margin: 0 0.4em;
+    font-size: 0.3em;
+}
+
+#logo img {
+    width: 20px;
+    height: auto;
+}

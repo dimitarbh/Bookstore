@@ -120,8 +120,6 @@ main {
 
 #books-section{
     flex: 3; 
-    
-    
 }
 
 #books, #topsellers {
@@ -149,9 +147,6 @@ main {
 }
 
 #books-section #read-more {
-
-    bottom: 0;
-    left: 0;
     width: 70%;
     background-color:#E76F51;
     color: rgb(46, 46, 46); 
