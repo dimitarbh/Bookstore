@@ -10,7 +10,24 @@ document.addEventListener("DOMContentLoaded", function() {
         window.location.reload();
     }
 
-    const source = document.getElementById('book-template').innerHTML;
+    const source = `
+        {{#each books}}
+            <li class="book">
+                <img class="cover-image" src="{{image}}" alt="Book Cover">
+                <h5>{{title}}</h5>
+                <p class="author">Author: {{author}}</p>
+                <p class="description">Description: {{description}}</p>
+                <p class="publisher">Publisher: {{publisher}}</p>
+                <p class="price">Price: {{price}}</p>
+                {{#if discountedPrice}}
+                    <p class="discounted-price">Discounted Price: {{discountedPrice}}</p>
+                {{/if}}
+                <p class="top-selling">Top Selling: {{#if topSelling}}Yes{{else}}No{{/if}}</p>
+                <p class="created-at">Created At: {{createdAt}}</p>
+            </li>
+        {{/each}}
+    `;
+
     const template = Handlebars.compile(source);
 
     fetch('https://bookstorebe-production.up.railway.app/')
@@ -21,6 +38,9 @@ document.addEventListener("DOMContentLoaded", function() {
             return response.json();
         })
         .then(data => {
+            const topSellers = data.filter(book => book.topSelling);
+            const topSellersDiv = document.getElementById('topsellers');
+            topSellersDiv.innerHTML = template({ books: topSellers });
             const booksDiv = document.getElementById('books');
             booksDiv.innerHTML = template({ books: data });
         })
@@ -28,5 +48,4 @@ document.addEventListener("DOMContentLoaded", function() {
             console.error('There was a problem fetching the books:', error);
         });
 });
-//shte polzvam idto za topseller s loop , loopvam topselleing key i taka shte gi izkaram gore 3te ili edin po edin gi loop
-//templates handlebars da izpolzvam nego za knigite i tqh -> mustache
+
