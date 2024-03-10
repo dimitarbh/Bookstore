@@ -122,6 +122,10 @@ main {
     flex: 3; 
 }
 
+.books-title {
+    text-align: center;
+}
+
 #books, #topsellers {
     display: grid;
     grid-template-columns: auto auto auto;
