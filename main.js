@@ -51,12 +51,14 @@ document.addEventListener("DOMContentLoaded", function() {
             return response.json();
         })
         .then(data => {
-            const topsellerDiv = document.getElementById("topsellers");
-            topsellerDiv.innerHTML = template({ books: data})
+            const topsellersDiv = document.getElementById('topsellers');
+            const topSellersData = data.filter(book => book.topSelling);
+            topsellersDiv.innerHTML = template({ books: topSellersData });
 
             const booksDiv = document.getElementById('books');
             booksDiv.innerHTML = template({ books: data });
 
+            topsellersDiv.addEventListener('click', toggleAdditionalInfo);
             booksDiv.addEventListener('click', toggleAdditionalInfo);
         })
         .catch(error => {
