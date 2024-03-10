@@ -144,8 +144,19 @@ main {
     border-radius: 1em;
 }
 
-.hide {
+#books-section .hide {
     display: none;
+}
+
+#books-section #read-more {
+
+    bottom: 0;
+    left: 0;
+    width: 70%;
+    background-color:#E76F51;
+    color: rgb(46, 46, 46); 
+    padding: 10px; 
+    border-radius: 0 0 10px 10px; 
 }
 
 #books-section ul {

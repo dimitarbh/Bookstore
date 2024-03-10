@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 {{/if}}
                 <p class="top-selling additional-info hide">Top Selling: {{#if topSelling}}Yes{{else}}No{{/if}}</p>
                 <p class="created-at additional-info hide">Created At: {{createdAt}}</p>
-                <button class="toggle-btn">Read more</button>
+                <button id="read-more" class="toggle-btn">Read more</button>
             </li>
         {{/each}}
     `;
@@ -51,6 +51,9 @@ document.addEventListener("DOMContentLoaded", function() {
             return response.json();
         })
         .then(data => {
+            const topsellerDiv = document.getElementById("topsellers");
+            topsellerDiv.innerHTML = template({ books: data})
+
             const booksDiv = document.getElementById('books');
             booksDiv.innerHTML = template({ books: data });
 
