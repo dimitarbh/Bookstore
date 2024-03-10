@@ -144,6 +144,10 @@ main {
     border-radius: 1em;
 }
 
+.hide {
+    display: none;
+}
+
 #books-section ul {
     list-style-type: none; 
 }
@@ -175,7 +179,7 @@ main {
 #filter {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Align items to the start of the container */
+    justify-content: flex-start; 
     align-items: center;
     border: 1px solid black;
     margin: 1em;
