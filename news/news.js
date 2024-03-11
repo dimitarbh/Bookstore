@@ -1,0 +1,1 @@
+const description = "lorem10";
