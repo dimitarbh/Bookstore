@@ -54,8 +54,26 @@ main {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+#sortButton {
+    background-color: #E76F51;
+    color: #2a2a2a;
+    border: none;
+    padding: 1em 2em;
+    border-radius: 1em;
+    cursor: pointer;
+    margin: 1em 3em 0 1em;
+    width: 20%;
+    justify-content: center;
+    justify-self: center;
+    align-self: end;
+}
+
+#sortButton:hover {
+    background-color: #c7644b;
+}
+
 #margin-container {
-    margin: 2em 0;
+    margin: .5em 0 1.5em 0;
 }
 
 section {
@@ -70,7 +88,7 @@ section {
 
 section img {
     max-width: 10em;
-    max-width: auto;
+    max-height: fit-content;
     border-radius: 1em;
 
 }
@@ -87,7 +105,14 @@ section .news-text {
     padding: 0.7em;
 }
 
-section ul #date {
+.news-text h3 {
+    background-color: rgb(163, 143, 95);
+    border-radius: 1em;
+    padding: 0.7em; 
+    width: fit-content;
+}
+
+section ul .date {
     margin-top: 1em;
     margin-bottom: 3em;
 }
