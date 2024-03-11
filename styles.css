@@ -128,7 +128,7 @@ main {
 
 #books, #topsellers {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
     margin-top: 1.5em;
     margin-left: 2.5em;
     margin-right: 2.5em;
@@ -163,6 +163,8 @@ main {
 }
 
 .book {
+    display: flex;
+    flex-direction: column;
     border: 1px solid black;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     margin: 1em;
@@ -170,8 +172,30 @@ main {
     padding: 1em;
 }
 
-.author, .description, .publisher, .price, .discounted-price, .top-selling, .created-at {
+.book:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.bottom-content {
+    margin-top: auto;
+    margin-bottom: .5em;
+    text-align: center;
+}
+
+.toggle-btn {
+    width: 70%;
+    background-color: #E76F51;
+    color: rgb(46, 46, 46);
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+}
+
+
+
+.description, .publisher, .price, .discounted-price, .created-at {
     margin: 0.5em 0;
+    border-bottom: 1px solid rgb(45, 45, 45);
+    padding-top: .5em; 
 }
 
 .cover-image {
@@ -182,9 +206,6 @@ main {
     margin-bottom: 0.5em;
 }
 
-.book:hover {
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-}
 
 #filter {
     display: flex;
