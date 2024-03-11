@@ -1,0 +1,129 @@
+:root {
+    padding: 0; 
+    background-color: #E9C46A;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #E9C46A;
+    font-family: Arial, sans-serif;
+    margin: 0; 
+}
+
+header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    background-color: #E76F51;
+    padding: 10px;
+    width: 100%;
+    border-bottom: 1px solid black;
+    box-sizing: border-box;
+}
+
+header img {
+    width: 7em; 
+    border-radius: 10px;
+    margin-left: 6em; 
+}
+
+header h1 {
+    font-size: 36px;
+    text-align: center; 
+    flex-grow: 1; 
+    margin-right: 5em;
+}
+
+body{
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 3em ; 
+    flex-grow: 1;
+    width: 65%;
+    border-radius: 1em;
+    padding: auto;
+    background-color: #d0af5e;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#margin-container {
+    margin: 2em 0;
+}
+
+section {
+    display:flex;
+    flex-direction: row;
+    margin: .5em 2.5em;
+    padding: 1em;
+    background-color: rgb(138, 112, 52);
+    border-radius: 1em;
+
+}
+
+section img {
+    max-width: 10em;
+    max-width: auto;
+    border-radius: 1em;
+
+}
+
+section .column {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2em;
+}
+
+.column p {
+    background-color: rgb(163, 143, 95);
+    border-radius: 1em;
+    padding: 0.3em;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #E76F51;
+    border-top: 1px solid black;
+    width: 100%; 
+    box-sizing: border-box; 
+    margin-top: auto;
+}
+
+footer a, footer span {
+    color: rgb(15, 15, 15);
+    text-decoration: none; 
+    padding-left:  1.5em;
+}
+
+footer span {
+    text-align: center;
+    flex-grow: 1;
+}
+
+footer a:hover {
+    text-decoration: underline; 
+}
+
+footer #logo{
+    display: flex;
+    margin-right: 1.5em;
+}
+
+footer #logo a {
+    margin: 0 0.4em;
+    font-size: 0.3em;
+}
+
+footer #logo img {
+    width: 20px; 
+    height: auto;
+}
