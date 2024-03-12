@@ -141,9 +141,9 @@ main {
 
 #books-section, .book {
     border: 1px solid black;
+    border-radius: 1em;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     margin: 1em;
-    border-radius: 1em;
 }
 
 #books-section .hide {
