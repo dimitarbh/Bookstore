@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
         return `${day}.${month}.${year}`;
     });
 
-    fetch('https://bookstorebe-production.up.railway.app/')
+    fetch('https://bookstorebe-production.up.railway.app/books')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
