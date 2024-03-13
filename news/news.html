@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News</title>
     <script src="https://kit.fontawesome.com/867ac855f7.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
     <script src="news.js"></script>
     <link rel="stylesheet" href="news.css">
 </head>
@@ -14,126 +15,13 @@
         <h1>News</h1>
     </header>
     <main>
-        <button id="sortButton" onclick="toggleSort()">Sort by Date (Newest)</button>
+        <button id="sortButton" >Sort by Date (Newest)</button>
         <div id="margin-container">
-            <section>
-                <img src="../images/png/news.png" alt="News">
-                <div  class="news-text">
-                    <h3>news #1</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, accusantium labore aperiam odit eligendi odio nemo dolorem expedita consectetur consequatur quam ab laudantium praesentium architecto?</p>
-                </div>
-                <ul>
-                    <h5 class="date">Date: January 1, 2024</h5>
-                    <h5>Author: ${author}</h5> 
-                </ul>
-                
-            </section>
-            
-            <section>
-                <img src="../images/png/news.png" alt="News">
-                <div  class="news-text">
-                    <h3>news #2</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, accusantium labore aperiam odit eligendi odio nemo dolorem expedita consectetur consequatur quam ab laudantium praesentium architecto?</p>
-                </div>
-                <ul>
-                    <h5 class="date">Date: January 2, 2024</h5>
-                    <h5>Author: ${author}</h5> 
-                </ul>
-                
-            </section>
-            
-            <section>
-                <img src="../images/png/news.png" alt="News">
-                <div  class="news-text">
-                    <h3>news #3</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, accusantium labore aperiam odit eligendi odio nemo dolorem expedita consectetur consequatur quam ab laudantium praesentium architecto?</p>
-                </div>
-                <ul>
-                    <h5 class="date">Date: January 3, 2024</h5>
-                    <h5>Author: ${author}</h5> 
-                </ul>
-                
-            </section>
-            
-            <section>
-                <img src="../images/png/news.png" alt="News">
-                <div  class="news-text">
-                    <h3>news #4</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, accusantium labore aperiam odit eligendi odio nemo dolorem expedita consectetur consequatur quam ab laudantium praesentium architecto?</p>
-                </div>
-                <ul>
-                    <h5 class="date">Date: January 4, 2024</h5>
-                    <h5>Author: ${author}</h5> 
-                </ul>
-                
-            </section>
-            
-            <section>
-                <img src="../images/png/news.png" alt="News">
-                <div  class="news-text">
-                    <h3>news #5</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, accusantium labore aperiam odit eligendi odio nemo dolorem expedita consectetur consequatur quam ab laudantium praesentium architecto?</p>
-                </div>
-                <ul>
-                    <h5 class="date">Date: January 5, 2024</h5>
-                    <h5>Author: ${author}</h5> 
-                </ul>
-                
-            </section>
-            
-            <section>
-                <img src="../images/png/news.png" alt="News">
-                <div  class="news-text">
-                    <h3>news #6</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, accusantium labore aperiam odit eligendi odio nemo dolorem expedita consectetur consequatur quam ab laudantium praesentium architecto?</p>
-                </div>
-                <ul>
-                    <h5 class="date">Date: January 6, 2024</h5>
-                    <h5>Author: ${author}</h5> 
-                </ul>
-                
-            </section>
-            
-            <section>
-                <img src="../images/png/news.png" alt="News">
-                <div  class="news-text">
-                    <h3>news #7</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, accusantium labore aperiam odit eligendi odio nemo dolorem expedita consectetur consequatur quam ab laudantium praesentium architecto?</p>
-                </div>
-                <ul>
-                    <h5 class="date">Date: January 7, 2024</h5>
-                    <h5>Author: ${author}</h5> 
-                </ul>
-                
-            </section>
-            
-            <section>
-                <img src="../images/png/news.png" alt="News">
-                <div  class="news-text">
-                    <h3>news #8</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, accusantium labore aperiam odit eligendi odio nemo dolorem expedita consectetur consequatur quam ab laudantium praesentium architecto?</p>
-                </div>
-                <ul>
-                    <h5 class="date">Date: January 8, 2024</h5>
-                    <h5>Author: ${author}</h5> 
-                </ul>
-                
-            </section>
-
-            <section>
-                <img src="../images/png/news.png" alt="News">
-                <div  class="news-text">
-                    <h3>news #9</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, accusantium labore aperiam odit eligendi odio nemo dolorem expedita consectetur consequatur quam ab laudantium praesentium architecto?</p>
-                </div>
-                <ul>
-                    <h5 class="date">Date: January 9, 2024</h5>
-                    <h5>Author: ${author}</h5> 
-                </ul>
-                
+            <section class="news">
+                <div  class="news-text"></div>
+                <h5 class="date">Date: January 1, 2024</h5>  
             </section>
         </div>
-        
     </main>
     <footer>
         <a><h5>Contact us</h5></a>

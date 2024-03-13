@@ -36,7 +36,7 @@ header h1 {
     margin-right: 5em;
 }
 
-body{
+body {
     justify-content: center;
     align-items: center;
 }
@@ -59,13 +59,14 @@ main {
     color: #2a2a2a;
     border: none;
     padding: 1em 2em;
-    border-radius: 1em;
+    border-radius: 0 0 10px 10px; 
     cursor: pointer;
     margin: 1em 3em 0 1em;
     width: 20%;
     justify-content: center;
     justify-self: center;
     align-self: end;
+    
 }
 
 #sortButton:hover {
@@ -77,44 +78,58 @@ main {
 }
 
 section {
-    display:flex;
-    flex-direction: row;
+    display: flex;
+    flex-direction: column;
     margin: .5em 2.5em;
     padding: 1em;
     background-color: rgb(138, 112, 52);
     border-radius: 1em;
-
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 section img {
-    max-width: 10em;
-    max-height: fit-content;
+    max-width: 100%;
+    height: auto;
     border-radius: 1em;
-
 }
 
 section .news-text {
     display: flex;
     flex-direction: column;
-    margin-left: 1em;
+    margin-top: 1em;
 }
 
-.news-text p {
+.news-text p, .news-text h3 {
     background-color: rgb(163, 143, 95);
     border-radius: 1em;
     padding: 0.7em;
 }
 
-.news-text h3 {
-    background-color: rgb(163, 143, 95);
-    border-radius: 1em;
-    padding: 0.7em; 
-    width: fit-content;
-}
-
 section ul .date {
     margin-top: 1em;
-    margin-bottom: 3em;
+    margin-bottom: 1em;
+}
+
+.bottom-content {
+    margin-top: auto;
+    margin-bottom: .5em;
+    text-align: center;
+}
+
+.toggle-btn {
+    width: 50%;
+    background-color: #E76F51;
+    color: rgb(46, 46, 46);
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+}
+
+.additional-info {
+    display: none;
+}
+
+.additional-info:not(.hide) {
+    display: block;
 }
 
 footer {
