@@ -1,0 +1,111 @@
+:root {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #E9C46A;
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    background-color: #E76F51;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+
+header img, header h1 {
+    height: auto;
+}
+
+header img {
+    width: 7em; 
+    border-radius: 10px;
+    margin-left: 6em; 
+}
+
+header h1 {
+    font-size: 36px;
+    text-align: center; 
+    flex-grow: 1; 
+    margin-right: 5.1em;
+}
+
+header a, a:visited {
+    text-decoration: none;
+ } 
+
+header img {
+    width: 7em; 
+    border-radius: 10px;
+}
+
+main {
+    display: flex;
+    margin-top: 8.6em; 
+    margin-bottom: 2.6em; 
+    padding-bottom: 2.6em; 
+    flex: 1; 
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.fa-credit-card {
+    font-size: 2.5em;
+    color: rgb(15, 15, 15);   
+}
+
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #E76F51;
+    border-top: 1px solid black;
+    width: 100%; 
+    box-sizing: border-box; 
+    margin-top: auto;
+}
+
+footer a, footer span {
+    color: rgb(15, 15, 15);
+    text-decoration: none; 
+    padding-left:  1.5em;
+}
+
+footer span {
+    text-align: center;
+    flex-grow: 1;
+}
+
+footer a:hover {
+    text-decoration: underline; 
+}
+
+footer #logo{
+    display: flex;
+    margin-right: 1.5em;
+}
+
+footer #logo a {
+    margin: 0 0.4em;
+    font-size: 0.3em;
+}
+
+footer #logo img {
+    width: 20px; 
+    height: auto;
+}
