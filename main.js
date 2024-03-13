@@ -37,6 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 <p class=" hide">Top Selling: {{#if topSelling}}Yes{{else}}No{{/if}}</p>
                 <p class="created-at additional-info hide">Created At: {{formatDate createdAt}}</p>
                 <div class="bottom-content">
+                    <button class="buy-button">Buy</button>
                     <button id="read-more" class="toggle-btn">Read more</button>
                 </div>
             </li>
@@ -66,7 +67,8 @@ document.addEventListener("DOMContentLoaded", function() {
             topsellersDiv.innerHTML = template({ books: topSellersData });
 
             const booksDiv = document.getElementById('books');
-            booksDiv.innerHTML = template({ books: data });
+            const allBookData = data.filter(book => !book.topSelling);
+            booksDiv.innerHTML = template({ books: allBookData });
 
             topsellersDiv.addEventListener('click', toggleAdditionalInfo);
             booksDiv.addEventListener('click', toggleAdditionalInfo);

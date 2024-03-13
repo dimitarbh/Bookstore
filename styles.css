@@ -50,10 +50,12 @@ header img {
     border-radius: 10px;
 }
 
-header .fa-cart-shopping {
+header #column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-right: 3em;
-    font-size: 2.5em;
-    color: rgb(15, 15, 15);   
+    
 }
 
 header #logout-button {
@@ -61,15 +63,19 @@ header #logout-button {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding: 0.5em 1em;
     border-radius: 1em;
-    border: 1.4px solid #252525;;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     color: #252525;
-    padding: 10px 20px;
-    cursor: pointer;
-    position: absolute;
-    top: 10px; 
-    right: 10px; 
-    margin-right: 1.6em;
+    margin-bottom: 3em;
+    
 }
+
+header .fa-cart-shopping {
+    font-size: 2.5em;
+    color: rgb(15, 15, 15);  
+    
+}
+
+
 
 header #logout-button:hover {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
@@ -177,9 +183,21 @@ main {
 }
 
 .bottom-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: auto;
     margin-bottom: .5em;
     text-align: center;
+}
+
+.buy-button{
+    width: 70%;
+    background-color: #E76F51;
+    color: rgb(46, 46, 46);
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 0.2em;
 }
 
 .toggle-btn {
