@@ -11,14 +11,24 @@
     <body>
         <header>
             <a href="../index.html"><img src="../images/png/logo-color.png" alt="Logo"/></a>
-            <h1>Bookstore</h1>
+            <h1>Card details</h1>
         </header>
 
         <main>
             <section>
-                <i class="fa-solid fa-credit-card"></i>
-                <input type="text" value="First Name">
-                <input type="text" value="Last Name">
+                <i class="fa-solid fa-credit-card first-column"></i>
+                <label for="firstName"  >First Name:</label><br/>
+                <input type="text" name="firstName">
+                <label for="lastName"  >Last Name:</label><br/>
+                <input type="text" name="lastName">
+                <label for="cartNumber">Card number:</label>
+                <input type="text" name="cartNumber">
+                <label for="expirationDate">Expiration date:</label>
+                <input type="text" name="expirationDate">
+                <div class="button-container">
+                    <button class="first-column">See all cards</button>
+                    <button>Apply</button>
+                </div>
             </section>
         </main>
 
