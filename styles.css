@@ -132,6 +132,11 @@ main {
     text-align: center;
 }
 
+.star {
+    text-align: end;
+    margin-bottom: 1em;
+}
+
 #books, #topsellers {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;

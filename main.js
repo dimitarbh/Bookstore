@@ -22,9 +22,34 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
+    function addToFavorites(event) {
+        const star = event.target;
+        const book = star.closest('.book');
+        const title = book.querySelector('.title').textContent;
+        const author = book.querySelector('.author').textContent;
+        const description = book.querySelector('.description').textContent;
+        const publisher = book.querySelector('.publisher').textContent;
+        const price = book.querySelector('.price').textContent;
+        const discountedPrice = book.querySelector('.discounted-price').textContent;
+        const image = book.querySelector('.cover-image').src; // Corrected line
+    
+        const queryParams = new URLSearchParams({
+            image,
+            title,
+            author,
+            description,
+            publisher,
+            price,
+            discountedPrice,
+        });
+    
+        window.location.href = `favorites/favorites.html?${queryParams.toString()}`;
+    }
+
     const source = `
         {{#each books}}
             <li class="book">
+                <a class="star" href="#"><i class="fa-solid fa-star"></i></a>
                 <img class="cover-image" src="{{image}}" alt="Book Cover">
                 <h5 class="title">{{title}}</h5>
                 <p class="author">Author: {{author}}</p>
@@ -72,6 +97,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
             topsellersDiv.addEventListener('click', toggleAdditionalInfo);
             booksDiv.addEventListener('click', toggleAdditionalInfo);
+
+            topsellersDiv.querySelectorAll('.star').forEach(star => {
+                star.addEventListener('click', addToFavorites);
+            });
+            booksDiv.querySelectorAll('.star').forEach(star => {
+                star.addEventListener('click', addToFavorites);
+            });
         })
         .catch(error => {
             console.error('There was a problem fetching the books:', error);
