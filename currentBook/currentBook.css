@@ -93,19 +93,27 @@ main {
 
 .book {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    flex-direction: row;
+    align-items: center; 
     border: 1px solid black;
+    border-radius: 1em;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     margin:  2em 5em;
-    border-radius: 1em;
     padding: 1em;
 }
 
-.book:hover {
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+.book .cover-image {
+    width: 1000px;
+    height: auto;
+    margin-right: 20px; /* Add space between image and text */
 }
+
+.book-info {
+    flex: 1; /* Take remaining space */
+    text-align: left; /* Align text to the left */
+}
+
 
 .bottom-content {
     display: flex;
@@ -125,30 +133,20 @@ main {
     margin-bottom: 0.2em;
 }
 
-.toggle-btn {
-    width: 70%;
-    background-color: #E76F51;
-    color: rgb(46, 46, 46);
-    padding: 10px;
-    border-radius: 0 0 10px 10px;
-}
-
-
-
 .description, .publisher, .price, .discounted-price, .created-at {
-    margin: 0.5em 0;
+    margin-top: 0.5em; /* Adjust top margin */
+    margin-bottom: 0.5em; /* Adjust bottom margin */
+    padding: 0.5em 0; /* Add padding */
     border-bottom: 1px solid rgb(45, 45, 45);
-    padding-top: .5em; 
 }
 
 .cover-image {
-    width: 100%;
-    max-width: 150px;
+    max-width: 400px; 
+    width: 100%; 
     height: auto;
-    max-height:  200px;
     margin-bottom: 0.5em;
-
 }
+
 
 
 footer {

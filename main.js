@@ -22,6 +22,29 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
+    function redirectToCurrentBook(event) {
+        const book = event.currentTarget.closest('.book');
+        const title = book.querySelector('.title').textContent;
+        const author = book.querySelector('.author').textContent;
+        const description = book.querySelector('.description').textContent;
+        const publisher = book.querySelector('.publisher').textContent;
+        const price = book.querySelector('.price').textContent;
+        const discountedPrice = book.querySelector('.discounted-price').textContent;
+        const image = book.querySelector('.cover-image').src;
+    
+        const queryParams = new URLSearchParams({
+            image,
+            title,
+            author,
+            description,
+            publisher,
+            price,
+            discountedPrice,
+        });
+    
+        window.location.href = `currentBook/currentBook.html?${queryParams.toString()}`;
+    }
+
     function addToFavorites(event) {
         const star = event.target;
         const book = star.closest('.book');
@@ -31,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const publisher = book.querySelector('.publisher').textContent;
         const price = book.querySelector('.price').textContent;
         const discountedPrice = book.querySelector('.discounted-price').textContent;
-        const image = book.querySelector('.cover-image').src; // Corrected line
+        const image = book.querySelector('.cover-image').src; 
     
         const queryParams = new URLSearchParams({
             image,
@@ -49,9 +72,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const source = `
         {{#each books}}
             <li class="book">
-                <a class="star" href="#"><i class="fa-solid fa-star"></i></a>
+            <a class="star" href="#"><i class="fa-solid fa-star"></i></a>
+            <div class='currentBook'>
                 <img class="cover-image" src="{{image}}" alt="Book Cover">
                 <h5 class="title">{{title}}</h5>
+            </div>
                 <p class="author">Author: {{author}}</p>
                 <p class="description additional-info hide">Description: {{description}}</p>
                 <p class="publisher additional-info hide">Publisher: {{publisher}}</p>
@@ -104,6 +129,13 @@ document.addEventListener("DOMContentLoaded", function() {
             booksDiv.querySelectorAll('.star').forEach(star => {
                 star.addEventListener('click', addToFavorites);
             });
+            topsellersDiv.querySelectorAll('.currentBook').forEach(currentBook => {
+                currentBook.addEventListener('click', redirectToCurrentBook);
+            });
+            booksDiv.querySelectorAll('.currentBook').forEach(currentBook => {
+                currentBook.addEventListener('click', redirectToCurrentBook);
+            });
+            
         })
         .catch(error => {
             console.error('There was a problem fetching the books:', error);
