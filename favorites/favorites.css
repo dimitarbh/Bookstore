@@ -58,6 +58,7 @@ main {
     text-align: center;
     justify-content: center;
     align-items: center;
+    flex-grow: 1;
 }
 
 #books-section {
@@ -71,7 +72,6 @@ main {
     align-items: center;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 1em;
-    /* padding: 2em; */
     
 }
 
@@ -154,16 +154,17 @@ main {
 footer {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     background-color: #E76F51;
+    width: 100%; 
+    overflow: hidden;
     border-top: 1px solid black;
-    margin-top: 3em; 
 }
 
 footer a, footer span {
     color: rgb(15, 15, 15);
-    text-decoration: none;
-    padding-left: 1.5em;
+    text-decoration: none; 
+    padding-left:  1.5em;
 }
 
 footer span {
@@ -172,10 +173,10 @@ footer span {
 }
 
 footer a:hover {
-    text-decoration: underline;
+    text-decoration: underline; 
 }
 
-#logo {
+#logo{
     display: flex;
     margin-right: 1.5em;
 }
@@ -186,6 +187,7 @@ footer a:hover {
 }
 
 #logo img {
-    width: 20px;
+    width: 20px; 
     height: auto;
 }
+

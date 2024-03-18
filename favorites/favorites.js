@@ -1,4 +1,27 @@
 document.addEventListener("DOMContentLoaded", function() {
+
+    fetch('https://bookstorebe-production.up.railway.app/')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Failed to fetch favorites: Server Error');
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log(data);
+        })
+        .catch(error => {
+            console.error('There was a problem fetching favorites:', error.message);
+            const errorMessage = document.createElement('p');
+            errorMessage.textContent = 'Failed to fetch favorites. Please try again later.';
+            const errorContainer = document.getElementById('error-container');
+            if (errorContainer) {
+                errorContainer.appendChild(errorMessage);
+            } else {
+                console.error('Error container not found in the DOM');
+            }
+        });
+
     function parseQueryParameters() {
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
