@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
         })
         .then(data => {
             console.log(data);
+            displayFavoriteBooks(data);
         })
         .catch(error => {
             console.error('There was a problem fetching favorites:', error.message);
@@ -22,64 +23,72 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
 
-    function parseQueryParameters() {
-        const queryString = window.location.search;
-        const urlParams = new URLSearchParams(queryString);
-        const bookData = {};
-        for (const [key, value] of urlParams) {
-            bookData[key] = value;
-        }
-        return bookData;
+    function displayFavoriteBooks(books) {
+        const booksSection = document.getElementById('books-section');
+        booksSection.innerHTML = ''; 
+        books.forEach(bookData => {
+            const bookDiv = createBookElement(bookData);
+            booksSection.appendChild(bookDiv);
+        });
     }
 
-    function addBookToFavorites(bookData) {
-        const booksSection = document.getElementById('books-section');
-        
+    function createBookElement(bookData) {
         const bookDiv = document.createElement('div');
-        bookDiv.classList.add('book'); 
-        
+        bookDiv.classList.add('book');
+
         const bookImage = document.createElement('img');
-        bookImage.classList.add('cover-image'); 
+        bookImage.classList.add('cover-image');
         bookImage.src = bookData.image;
         bookImage.alt = 'Book Cover';
         bookDiv.appendChild(bookImage);
 
+        const bookInfoDiv = document.createElement('div');
+        bookInfoDiv.classList.add('book-info');
+
         const title = document.createElement('h5');
-        title.textContent = bookData.title; 
-        bookDiv.appendChild(title);
+        title.textContent = bookData.title;
+        bookInfoDiv.appendChild(title);
 
         const author = document.createElement('p');
-        author.textContent = bookData.author; 
-        bookDiv.appendChild(author);
+        author.textContent = `Author: ${bookData.author}`;
+        bookInfoDiv.appendChild(author);
 
-        const description = document.createElement('p');
-        description.classList.add('description', 'additional-info', 'hide'); 
-        description.textContent = bookData.description;
-        bookDiv.appendChild(description);
 
-        const publisher = document.createElement('p');
-        publisher.classList.add('publisher', 'additional-info', 'hide');
-        publisher.textContent = bookData.publisher; 
-        bookDiv.appendChild(publisher);
+        bookDiv.appendChild(bookInfoDiv);
 
-        const price = document.createElement('p');
-        price.classList.add('price', 'additional-info', 'hide'); 
-        price.textContent = bookData.price;
-        bookDiv.appendChild(price);
+        const removeButton = document.createElement('button');
+        removeButton.textContent = 'Remove from Favorites';
+        removeButton.classList.add('remove-button');
+        removeButton.dataset.bookId = bookData._id;
+        removeButton.addEventListener('click', removeFromFavorites);
+        bookDiv.appendChild(removeButton);
 
-        if (bookData.discountedPrice) {
-            const discountedPrice = document.createElement('p');
-            discountedPrice.classList.add('discounted-price', 'additional-info', 'hide'); 
-            discountedPrice.textContent = bookData.discountedPrice; 
-            bookDiv.appendChild(discountedPrice);
-        }
+        return bookDiv;
+    }
 
-        const readMoreButton = document.createElement('button');
-        readMoreButton.classList.add('toggle-btn'); 
-        readMoreButton.textContent = 'Read more';
-        bookDiv.appendChild(readMoreButton);
-
-        booksSection.appendChild(bookDiv);
+    function removeFromFavorites(event) {
+        const bookId = event.target.dataset.bookId;
+        fetch('https://bookstorebe-production.up.railway.app/remove', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${localStorage.getItem('token')}`
+            },
+            body: JSON.stringify({ bookId: bookId })
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Failed to remove book from favorites');
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('Book removed from favorites:', data);
+            event.target.closest('.book').remove(); 
+        })
+        .catch(error => {
+            console.error('Error removing book from favorites:', error);
+        });
     }
 
     function toggleAdditionalInfo(event) {
@@ -92,6 +101,16 @@ document.addEventListener("DOMContentLoaded", function() {
             });
             target.textContent = additionalInfo[0].classList.contains('hide') ? 'Read more' : 'Read less';
         }
+    }
+    
+    function parseQueryParameters() {
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const bookData = {};
+        for (const [key, value] of urlParams) {
+            bookData[key] = value;
+        }
+        return bookData;
     }
 
     const bookData = parseQueryParameters();

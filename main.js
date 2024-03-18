@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const price = book.querySelector('.price').textContent;
         const discountedPrice = book.querySelector('.discounted-price').textContent;
         const image = book.querySelector('.cover-image').src;
-    
+
         const queryParams = new URLSearchParams({
             image,
             title,
@@ -41,38 +41,54 @@ document.addEventListener("DOMContentLoaded", function() {
             price,
             discountedPrice,
         });
-    
+
         window.location.href = `currentBook/currentBook.html?${queryParams.toString()}`;
     }
 
-    function addToFavorites(event) {
-        const star = event.target;
-        const book = star.closest('.book');
-        const title = book.querySelector('.title').textContent;
-        const author = book.querySelector('.author').textContent;
-        const description = book.querySelector('.description').textContent;
-        const publisher = book.querySelector('.publisher').textContent;
-        const price = book.querySelector('.price').textContent;
-        const discountedPrice = book.querySelector('.discounted-price').textContent;
-        const image = book.querySelector('.cover-image').src; 
-    
-        const queryParams = new URLSearchParams({
-            image,
-            title,
-            author,
-            description,
-            publisher,
-            price,
-            discountedPrice,
+    function addToFavorites(bookId) {
+        console.log('Adding book to favorites with ID:', bookId);
+        fetch('https://bookstorebe-production.up.railway.app/add', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${localStorage.getItem('token')}`
+            },
+            body: JSON.stringify({ bookId: bookId })
+        })
+        .then(response => {
+            console.log('Response status:', response.status);
+            if (!response.ok) {
+                throw new Error('Failed to add book to favorites');
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('Book added to favorites:', data);
+            showToast('Book added to favorites');
+        })
+        .catch(error => {
+            console.error('Error adding book to favorites:', error);
+            showToast('Failed to add book to favorites');
         });
+    }
     
-        window.location.href = `favorites/favorites.html?${queryParams.toString()}`;
+    
+
+    function showToast(message) {
+        const toast = document.createElement('div');
+        toast.classList.add('toast');
+        toast.textContent = message;
+        document.body.appendChild(toast);
+
+        setTimeout(() => {
+            toast.remove();
+        }, 3000);
     }
 
     const source = `
         {{#each books}}
             <li class="book">
-            <a class="star" href="#"><i class="fa-solid fa-star"></i></a>
+            <a class="star" href="#" data-book-id="{{_id}}"><i class="fa-solid fa-star"></i></a>
             <div class='currentBook'>
                 <img class="cover-image" src="{{image}}" alt="Book Cover">
                 <h5 class="title">{{title}}</h5>
@@ -93,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function() {
             </li>
         {{/each}}
     `;
-    
+
     const template = Handlebars.compile(source);
 
     Handlebars.registerHelper('formatDate', function(dateString) {
@@ -124,10 +140,20 @@ document.addEventListener("DOMContentLoaded", function() {
             booksDiv.addEventListener('click', toggleAdditionalInfo);
 
             topsellersDiv.querySelectorAll('.star').forEach(star => {
-                star.addEventListener('click', addToFavorites);
+                star.addEventListener('click', function(event) {
+                    const bookId = event.target.dataset.bookId;
+                    if (bookId) {
+                        addToFavorites(bookId);
+                    }
+                });
             });
             booksDiv.querySelectorAll('.star').forEach(star => {
-                star.addEventListener('click', addToFavorites);
+                star.addEventListener('click', function(event) {
+                    const bookId = event.target.dataset.bookId;
+                    if (bookId) {
+                        addToFavorites(bookId);
+                    }
+                });
             });
             topsellersDiv.querySelectorAll('.currentBook').forEach(currentBook => {
                 currentBook.addEventListener('click', redirectToCurrentBook);
@@ -135,7 +161,7 @@ document.addEventListener("DOMContentLoaded", function() {
             booksDiv.querySelectorAll('.currentBook').forEach(currentBook => {
                 currentBook.addEventListener('click', redirectToCurrentBook);
             });
-            
+
         })
         .catch(error => {
             console.error('There was a problem fetching the books:', error);
