@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-    fetch('https://bookstorebe-production.up.railway.app/')
+    fetch('https://bookstorebe-production.up.railway.app/favorites/')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Failed to fetch favorites: Server Error');
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function removeFromFavorites(event) {
         const bookId = event.target.dataset.bookId;
-        fetch('https://bookstorebe-production.up.railway.app/remove', {
+        fetch('https://bookstorebe-production.up.railway.app/favorites/remove', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function() {
             target.textContent = additionalInfo[0].classList.contains('hide') ? 'Read more' : 'Read less';
         }
     }
-    
+
     function parseQueryParameters() {
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);

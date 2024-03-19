@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function addToFavorites(bookId) {
         console.log('Adding book to favorites with ID:', bookId);
-        fetch('https://bookstorebe-production.up.railway.app/add', {
+        fetch('https://bookstorebe-production.up.railway.app/favorites/add', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
