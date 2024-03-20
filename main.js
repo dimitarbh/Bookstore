@@ -46,6 +46,8 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function addToFavorites(bookId) {
+        const token = localStorage.getItem('token');
+        console.log('Token:', token); 
         console.log('Adding book to favorites with ID:', bookId);
         fetch('https://bookstorebe-production.up.railway.app/favorites/add', {
             method: 'POST',
@@ -72,8 +74,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
     
-    
-
     function showToast(message) {
         const toast = document.createElement('div');
         toast.classList.add('toast');
@@ -88,12 +88,12 @@ document.addEventListener("DOMContentLoaded", function() {
     const source = `
         {{#each books}}
             <li class="book">
-            <a class="star" href="#" data-book-id="{{_id}}"><i class="fa-solid fa-star"></i></a>
+            <button class="star" href="#" data-book-id="{{_id}}"><i class="fa-solid fa-star"></i></button>
             <div class='currentBook'>
                 <img class="cover-image" src="{{image}}" alt="Book Cover">
                 <h5 class="title">{{title}}</h5>
             </div>
-                <p class="author">Author: {{author}}</p>
+                <p class="author hide">Author: {{author}}</p>
                 <p class="description additional-info hide">Description: {{description}}</p>
                 <p class="publisher additional-info hide">Publisher: {{publisher}}</p>
                 <p class="price additional-info hide">Price: {{price}}</p>

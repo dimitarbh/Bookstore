@@ -133,8 +133,14 @@ main {
 }
 
 .star {
-    text-align: end;
+    text-align: center;
+    justify-content: center;
     margin-bottom: 1em;
+    border-radius: 1em;
+    min-width: 23%;
+    max-width: 23%;
+    background-color: #E76F51;
+    
 }
 
 #books, #topsellers {
@@ -204,6 +210,7 @@ main {
     padding: 10px;
     border-radius: 10px 10px 0 0;
     margin-bottom: 0.2em;
+    margin-top: 1em;
 }
 
 .toggle-btn {
