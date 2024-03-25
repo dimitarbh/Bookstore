@@ -44,10 +44,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
         window.location.href = `currentBook/currentBook.html?${queryParams.toString()}`;
     }
-
+    
     function addToFavorites(bookId) {
-        const token = localStorage.getItem('token');
-        console.log('Token:', token); 
         console.log('Adding book to favorites with ID:', bookId);
         fetch('https://bookstorebe-production.up.railway.app/favorites/add', {
             method: 'POST',
@@ -66,7 +64,6 @@ document.addEventListener("DOMContentLoaded", function() {
         })
         .then(data => {
             console.log('Book added to favorites:', data);
-            showToast('Book added to favorites');
         })
         .catch(error => {
             console.error('Error adding book to favorites:', error);
@@ -74,16 +71,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
     
-    function showToast(message) {
-        const toast = document.createElement('div');
-        toast.classList.add('toast');
-        toast.textContent = message;
-        document.body.appendChild(toast);
-
-        setTimeout(() => {
-            toast.remove();
-        }, 3000);
-    }
 
     const source = `
         {{#each books}}

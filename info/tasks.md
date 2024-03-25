@@ -2,6 +2,10 @@ General guide lines
 reuse general colors(5-6 additional colors), styles, components
 
 
+https://dimitarbh.github.io/Bookstore/
+
+https://excalidraw.com/#room=55c84859e9ad66638bee,03kQymBTXae76k-BQeMPvg
+
 1. Homepage
     - Header 
         - logo
