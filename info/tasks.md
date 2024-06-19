@@ -363,16 +363,5 @@ https://excalidraw.com/#room=55c84859e9ad66638bee,03kQymBTXae76k-BQeMPvg
         - apply button (reuseable)
             - apply any changes
 
-button reuse apply, add
-book container top sellers, books, promotions
-book container stretch promotions, new products
-favorites stars
-username textfield 
-password textfield
-Header
-yes button 
-no button 
-modal 
-share with text
-product container
+
 
